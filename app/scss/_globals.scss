@@ -10,5 +10,26 @@ html {
 body {
     margin: 0;
     padding: 0;
-    line-height: 1;
+    line-height: 1.2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+// FLEXBOX --> globales para todos los elementos flex
+
+.flex {
+    display: flex;
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+    
+
 }

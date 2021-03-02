@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="logo" sizes="32x32"  href="/assets/logo-mobile.svg"> <!-- FIXME: Logo png -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
     <title>Gifos</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#" class="logo">
+    <header class="header">
+        <nav class="flex flex-jc-sb flex-ai-c">
+            <a href="#" class="logo"><b>GIFOS</b>
                 <img src="/assets/logo-mobile.svg" alt="logo">
             </a>
             <a href="#" class="hamburger">
@@ -19,6 +24,13 @@
         </nav>
     </header>
 
+    <main>
+        <h1 class="flex flex-jc-c flex-ai-c">Inspírate, busca, guarda, y crea los mejores Gifos</h1> <!-- TODO: GIFOS mayuscula y azul claro -->
+        <img src="/assets/ilustra_header.svg" alt="ilustración" class="flex flex-jc-c flex-ai-c">
+        <input type="search" name="" id="" class="flex flex-jc-c flex-ai-c">
     
+    </main>
+
+    <script src="/app/js/script.js"></script>
 </body>
 </html>
