@@ -59,8 +59,16 @@ body {
   color: #572EE5;
 }
 
+.header .logo b {
+  position: absolute;
+  top: 55px;
+  left: 33px;
+  z-index: 1;
+}
+
 .header .logo img {
   width: 48px;
   height: 48px;
+  z-index: -1;
 }
 /*# sourceMappingURL=style.css.map */
