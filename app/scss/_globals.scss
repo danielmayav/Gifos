@@ -30,6 +30,29 @@ body {
     &-ai-c {
         align-items: center;
     }
-    
-
+   }
+a {
+    color: $darkblue;
 }
+
+a:visited {
+    color: $grey;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+} 
+
+// VISIBILITY
+
+.hide-for-mobile { // hide for mobile devices
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}
+
+.hide-for-desktop { // hide for viewport width
+    @include breakpoint-up(large){
+        display: none;
+    }
+} 

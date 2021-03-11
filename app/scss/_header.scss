@@ -7,9 +7,8 @@
     .hamburguer {
         width: 15px;
         height: 14px;
-       
     }
-    // FIXME: Logo con texto
+ 
     .logo { 
         justify-content: baseline;
         text-decoration: none;
@@ -29,9 +28,24 @@
         height: 48px;
         z-index: -1;
     }
+    
+    ul {
+        width: 500px;
+        justify-content: space-evenly;
+        font-size: 13px;
+        color: $darkblue;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
 
+    ul .new-gif-logo{
+        width: 48px;
+        height: 48px;
+    }
 
 }
+
 
 
 

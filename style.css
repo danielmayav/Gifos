@@ -40,6 +40,30 @@ body {
           align-items: center;
 }
 
+a {
+  color: #572EE5;
+}
+
+a:visited {
+  color: #9CAFC3;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
 .header nav {
   padding: 35px 25px 25px;
 }
@@ -70,5 +94,22 @@ body {
   width: 48px;
   height: 48px;
   z-index: -1;
+}
+
+.header ul {
+  width: 500px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 13px;
+  color: #572EE5;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header ul .new-gif-logo {
+  width: 48px;
+  height: 48px;
 }
 /*# sourceMappingURL=style.css.map */
