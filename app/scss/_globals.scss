@@ -55,4 +55,11 @@ a:link, a:visited {
     @include breakpoint-up(large){
         display: none;
     }
-} 
+}   
+
+// IMG RESPONSIVE
+
+img {
+    max-width: 100%;
+    height: auto;
+}
