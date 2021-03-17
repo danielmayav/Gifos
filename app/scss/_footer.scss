@@ -1,11 +1,58 @@
 footer {
     display: flex;
+    justify-content: space-between;
     width: auto;
     height: 190px;
     padding: 50px;
     flex-wrap: wrap;
     font-size: 13px;
     font-family: 'Roboto', sans-serif;
-    justify-content: center;
-    text-align: center;
+    align-content: center;
+
+    
+    a {
+        padding: 20px;
+    }
+      
+
+    }
+
+
+    .footer-icons {
+        
+        padding: 10px;
+        &-fb {
+            background-image: url("/assets/icon_facebook.svg");
+            background-repeat: no-repeat;
+            background-position: 50% 20%;
+        }
+        &-tw {
+            background-image: url("/assets/icon-twitter.svg");
+            background-repeat: no-repeat;
+            background-position: 50% 20%;
+        }
+        &-in{
+            background-image: url("/assets/icon_instagram.svg");
+            background-repeat: no-repeat;
+            background-position: 50% 20%;
+        }
+        
+    .footer-icons {
+        padding: 10px;
+        &-fb:hover {
+            background-image: url("/assets/icon_facebook_hover.svg");
+            background-repeat: no-repeat;
+            background-position: 50% 20%;
+            }
+        &-tw:hover {
+            background-image: url("/assets/icon-twitter-hover.svg");
+            background-repeat: no-repeat;
+            background-position: 50% 20%;
+            }
+        &-in:hover {
+            background-image: url("/assets/icon_instagram-hover.svg");
+            background-repeat: no-repeat;
+            background-position: 50% 20%;
+            } 
+        }
     }

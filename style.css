@@ -178,6 +178,9 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: auto;
   height: 190px;
   padding: 50px;
@@ -185,9 +188,55 @@ footer {
       flex-wrap: wrap;
   font-size: 13px;
   font-family: 'Roboto', sans-serif;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+footer a {
+  padding: 20px;
+}
+
+.footer-icons {
+  padding: 10px;
+}
+
+.footer-icons-fb {
+  background-image: url("/assets/icon_facebook.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+}
+
+.footer-icons-tw {
+  background-image: url("/assets/icon-twitter.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+}
+
+.footer-icons-in {
+  background-image: url("/assets/icon_instagram.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+}
+
+.footer-icons .footer-icons {
+  padding: 10px;
+}
+
+.footer-icons .footer-icons-fb:hover {
+  background-image: url("/assets/icon_facebook_hover.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+}
+
+.footer-icons .footer-icons-tw:hover {
+  background-image: url("/assets/icon-twitter-hover.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+}
+
+.footer-icons .footer-icons-in:hover {
+  background-image: url("/assets/icon_instagram-hover.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
 }
 /*# sourceMappingURL=style.css.map */
