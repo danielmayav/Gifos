@@ -13,19 +13,19 @@
 </head>
 <body>
     <header class="header">
-        <nav class="flex flex-jc-sb flex-ai-c">
+        <div class="overlay"></div>
+        <nav class="nav flex flex-jc-sb flex-ai-c">
             <a href="#" class="logo"><b>GIFOS</b>
                 <img src="/assets/logo-mobile.svg" alt="logo">
             </a>
-            <ul class="flex flex-ai-c hide-for-mobile">
+            <ul class="flex flex-ai-c hide-for-mobile" id="nav-links">
                 <li><a href="#">MODO NOCTURNO</a></li>
-                <li><a href="#"></a>FAVORITOS</li>
-                <li><a href="#"></a>MIS GIFOS</li>
-                <li><a href="#"></a><img class="new-gif-logo" src="/assets/button-crear-gifo.svg" alt="crear gifo"></li>
+                <li><a href="#">FAVORITOS</a></li>
+                <li><a href="#">MIS GIFOS</a></li>
+                <li><a href="#" class="hide-for-mobile"><img class="new-gif-logo" src="/assets/button-crear-gifo.svg" alt="crear gifo"></li></a>
             </ul>
-            <a href="#" class="hamburger hide-for-desktop">
-                <img src="/assets/burger.svg" alt="logo">
-            </a>
+            <a href="#" class="hamburguer hide-for-desktop" id="hamburguerBtn"></a>
+            
             
         </nav>
     </header>
@@ -43,7 +43,9 @@
 
     <footer class="footer"> 
         
-        Compartir
+        <div>
+            <p>Compartir</p>
+        </div>
             
                 <div class="footer-icons">
                     <a href="#" class="footer-icons-fb" alt="facebook" ></a>
@@ -51,7 +53,9 @@
                     <a href="#" class="footer-icons-in" alt="instagram" ></a>
                 </div>
             
-            © GIFOS 2020 All Rights Reserved.
+            <div>
+                <p>© GIFOS 2020 All Rights Reserved.</p>
+            </div>
        
 
     </footer>

@@ -4,55 +4,70 @@ footer {
     width: auto;
     height: 190px;
     padding: 50px;
-    flex-wrap: wrap;
     font-size: 13px;
     font-family: 'Roboto', sans-serif;
     align-content: center;
+    align-items: center;
+
+    @include breakpoint-down(small){
+        flex-direction: column;
+        align-items: center;
+    }
 
     
     a {
         padding: 20px;
     }
+
+   
       
 
     }
 
+   
+    
 
     .footer-icons {
+        align-items: inherit;
         
-        padding: 10px;
+        @include breakpoint-up(medium) {
+            position: absolute;
+            left: 7.5rem;
+                      
+        }
+
         &-fb {
             background-image: url("/assets/icon_facebook.svg");
             background-repeat: no-repeat;
-            background-position: 50% 20%;
+            background-position: 50% 50%;
         }
         &-tw {
             background-image: url("/assets/icon-twitter.svg");
             background-repeat: no-repeat;
-            background-position: 50% 20%;
+            background-position: 50% 50%;
         }
         &-in{
             background-image: url("/assets/icon_instagram.svg");
             background-repeat: no-repeat;
-            background-position: 50% 20%;
+            background-position: 50% 50%;
         }
         
-    .footer-icons {
-        padding: 10px;
+            // HOVER
+
         &-fb:hover {
             background-image: url("/assets/icon_facebook_hover.svg");
             background-repeat: no-repeat;
-            background-position: 50% 20%;
+            background-position: 50% 50%;
             }
         &-tw:hover {
             background-image: url("/assets/icon-twitter-hover.svg");
             background-repeat: no-repeat;
-            background-position: 50% 20%;
+            background-position: 50% 50%;
             }
         &-in:hover {
             background-image: url("/assets/icon_instagram-hover.svg");
             background-repeat: no-repeat;
-            background-position: 50% 20%;
+            background-position: 50% 50%;
             } 
-        }
+        
     }
