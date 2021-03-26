@@ -1,4 +1,5 @@
 
+// NAVBAR - HAMBUERGUER MENU
 
 const hamburguerBtn = document.querySelector('#hamburguerBtn');
 const header = document.querySelector('.header');

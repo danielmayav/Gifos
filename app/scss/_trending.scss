@@ -1,0 +1,26 @@
+.trending {
+    background-color: $backgroundgray;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    
+   h2 {
+      color: $darkblue;
+        font-size: 25px;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        margin: 0;
+   } 
+
+   p {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+   }
+    
+}

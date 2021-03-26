@@ -1,0 +1,72 @@
+.camera-container {
+    position: absolute;
+    top: 15.625rem;
+    left: 3.125rem;
+    flex-wrap: wrap;
+    height: 9.375rem;
+    width: 9.375rem;
+    
+    margin: 0;
+
+    .cinta1{
+        position: relative;
+        top: 19px;
+        left: 4px;
+        width: 2.875rem;
+       height: 2.875rem; 
+       z-index: 1;
+    }
+    .cinta2{
+        position: relative;
+        top: 3px;
+        left: 4px;
+        width: 3.975rem;
+        height: 3.975rem; 
+        z-index: 1;
+    }
+    .camara{
+        position: relative;
+        bottom: 12px;
+        left: 15px;
+       width: 6.0125rem;
+       height: 6.5312rem;
+       z-index: -1; 
+    }
+    .luzcamara{
+        position: relative;
+        bottom: 160px;
+        left: 115px;
+
+       width: 5.6875rem;
+       height: 9.4375rem; 
+    }
+    
+
+    
+}
+
+.video-cont {
+    position: relative;
+    left: 15.625rem;
+    width: 43rem;
+    height: 24.375rem;
+    border: 1px solid $darkblue;
+    margin: 0;
+}
+
+
+.vid-buttons {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    
+    img {
+        align-self: flex-end;
+    }
+}
+
+span {
+    border: 3px solid $darkblue;
+    width: 500px;
+}
+
