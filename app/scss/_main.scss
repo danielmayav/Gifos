@@ -43,6 +43,10 @@
         &:focus {
             background-image: none;
         }
+        &:focus::before {
+            content: url('/assets/icon-search-modo-noct.svg');
+        }
+        
     }
 
 

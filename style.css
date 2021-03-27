@@ -115,11 +115,15 @@ img {
   color: #572EE5;
 }
 
-.header .logo b {
-  position: absolute;
-  top: 55px;
-  left: 33px;
-  z-index: 3;
+.header .logo::after {
+  content: 'S';
+  font-size: 14px;
+  position: relative;
+  bottom: 0.875rem;
+  right: 3px;
+  font-weight: bold;
+  z-index: 4;
+  font-family: 'Roboto', sans-serif;
 }
 
 .header .logo img {
@@ -197,7 +201,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
+  position: unset;
+  left: auto;
   padding: 20px;
   z-index: 4;
   -ms-flex-line-pack: center;
@@ -205,7 +210,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
+  width: auto;
 }
 
 .nav-links li a {
@@ -266,6 +271,10 @@ img {
 
 .main input:focus {
   background-image: none;
+}
+
+.main input:focus::before {
+  content: url("/assets/icon-search-modo-noct.svg");
 }
 
 .main img {
@@ -422,7 +431,7 @@ footer .footer-icons-in:hover {
 .camera-container {
   position: absolute;
   top: 15.625rem;
-  left: 3.125rem;
+  left: 12%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   height: 9.375rem;
@@ -467,11 +476,27 @@ footer .footer-icons-in:hover {
 
 .video-cont {
   position: relative;
-  left: 15.625rem;
+  left: 28%;
   width: 43rem;
   height: 24.375rem;
   border: 1px solid #572EE5;
   margin: 0;
+}
+
+.btns-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .vid-buttons {
@@ -479,19 +504,54 @@ footer .footer-icons-in:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 43rem;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  height: 70px;
 }
 
-.vid-buttons img {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+.vid-buttons button {
+  background-color: #fff;
+  padding: 8px;
+  color: #572EE5;
+  border: 1px solid #572EE5;
+  border-radius: 50%;
+  width: auto;
+  height: auto;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.btns-container img {
+  position: absolute;
+  right: 6.25rem;
+  top: 30rem;
+  width: 8.875rem;
+  height: auto;
 }
 
 span {
   border: 3px solid #572EE5;
-  width: 500px;
+  width: 65%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.video-btn {
+  background-color: #fff;
+  padding: 15px;
+  color: #572EE5;
+  border: 1px solid #572EE5;
+  border-radius: 25px;
+  width: 7.5rem;
+  height: auto;
+  margin-top: 20px;
 }
 /*# sourceMappingURL=style.css.map */

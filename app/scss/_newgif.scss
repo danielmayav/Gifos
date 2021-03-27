@@ -1,7 +1,7 @@
 .camera-container {
     position: absolute;
     top: 15.625rem;
-    left: 3.125rem;
+    left: 12%;
     flex-wrap: wrap;
     height: 9.375rem;
     width: 9.375rem;
@@ -47,7 +47,7 @@
 
 .video-cont {
     position: relative;
-    left: 15.625rem;
+    left: 28%;
     width: 43rem;
     height: 24.375rem;
     border: 1px solid $darkblue;
@@ -55,18 +55,60 @@
 }
 
 
+.btns-container {
+flex-direction: column;
+width: 100%;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+
 .vid-buttons {
     flex-direction: row;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-between;
+    max-width: 43rem;
+    align-content: space-around;
+    height: 70px;
     
-    img {
-        align-self: flex-end;
+    
+    button {
+        background-color: #fff;
+        padding: 8px;
+        color: $darkblue;
+        border: 1px solid $darkblue;
+        border-radius: 50%;
+        width: auto;
+        height: auto;
+        text-align: center;
+        margin-left: 20px;
+        margin-right: 20px;
     }
-}
+    
+   
+} 
+
+.btns-container img {
+        position:absolute;
+        right: 6.25rem; top: 30rem;
+        width: 8.875rem;
+        height: auto;
+    }
 
 span {
     border: 3px solid $darkblue;
-    width: 500px;
+    width: 65%;
+    align-self: center;
+    justify-self: center;
+}
+
+.video-btn {
+    background-color: #fff;
+        padding: 15px;
+        color: $darkblue;
+        border: 1px solid $darkblue;
+        border-radius: 25px;
+        width: 7.5rem;
+        height: auto;
+        margin-top: 20px;
 }
 

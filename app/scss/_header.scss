@@ -24,13 +24,19 @@
         font-family: 'Roboto', sans-serif;
         font-size: 16px;
         color: $darkblue;
+
+        &::after {
+            content: 'S';
+            font-size: 14px;
+            position: relative;
+            bottom: 0.875rem; right: 3px;
+            font-weight: bold;
+            z-index: 4;
+            font-family: 'Roboto', sans-serif;
+        }
     }
 
-    .logo b{
-        position: absolute;
-        top: 55px; left: 33px;
-        z-index: 3;
-    }
+   
 
     .logo img {
         width: 48px;
@@ -106,12 +112,13 @@
 
     li {
        display: flex;
-        position: relative;
+        position: unset;
+        left: auto;
         padding: 20px;
         z-index: 4;
         align-content: center;
         justify-content: center;
-        width: 100%;
+        width: auto;
         
         a {
             color: #fff;
