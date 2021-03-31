@@ -28,6 +28,7 @@ html {
 }
 
 body {
+  background-color: var(--page-background);
   margin: 0;
   padding: 0;
   line-height: 1.2;
@@ -87,6 +88,34 @@ img {
   height: auto;
 }
 
+:root {
+  --page-background:      #FFFFFF;
+  --color-text-blue:      #572EE5;
+  --color-text-black:     #000000;
+  --hamburguer-close:     url('/assets/burger.svg');
+  --hamburguer-open:      url('/assets/close.svg');
+  --background-overlay:   #572EE5;
+  --bg-sec-trending:      #F3F5F8;
+  --search-icon:          url('/assets/icon-search.svg');
+  --fb-icon-hover:        url('/assets/icon_facebook_hover.svg');
+  --in-icon-hover:        url('/assets/icon_instagram-hover.svg');
+  --tw-icon-hover:        url('/assets/icon-twitter-hover.svg');
+}
+
+.dark {
+  --page-background: #37383C;
+  --color-text-blue: #FFFFFF;
+  --color-text-black: #FFFFFF;
+  --hamburguer-close: url('/assets/burger-modo-noct.svg');
+  --hamburguer-open:  url('/assets/close-modo-noct.svg');
+  --background-overlay:   #000000;
+  --bg-sec-trending:      #222326;
+  --search-icon:          url('/assets/icon-search-modo-noct.svg');
+  --fb-icon-hover:        url('/assets/icon_facebook_noc.svg');
+  --in-icon-hover:        url('/assets/icon_instagram_noc.svg');
+  --tw-icon-hover:        url('/assets/icon_twitter_noc.svg');
+}
+
 .header .nav {
   position: -webkit-sticky;
   position: sticky;
@@ -96,12 +125,12 @@ img {
 .header .hamburguer {
   width: 20px;
   height: 20px;
-  background-image: url(/assets/burger.svg);
+  background-image: var(--hamburguer-close);
   background-repeat: no-repeat;
 }
 
 .header .hamburguer:active {
-  background-image: url(/assets/close.svg);
+  background-image: var(--hamburguer-open);
   background-repeat: no-repeat;
 }
 
@@ -112,18 +141,17 @@ img {
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  color: #572EE5;
+  color: var(--color-text-blue);
 }
 
 .header .logo::after {
-  content: 'S';
+  content: 'GIFOS';
   font-size: 14px;
   position: relative;
   bottom: 0.875rem;
-  right: 3px;
+  right: 2.1875rem;
   font-weight: bold;
   z-index: 4;
-  font-family: 'Roboto', sans-serif;
 }
 
 .header .logo img {
@@ -138,7 +166,7 @@ img {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   font-size: 13px;
-  color: #572EE5;
+  color: var(--color-text-blue);
   font-weight: bold;
   list-style-type: none;
   margin: 0;
@@ -153,7 +181,7 @@ img {
 .header .open-ham {
   width: 20px;
   height: 20px;
-  background-image: url(/assets/close.svg);
+  background-image: var(--hamburguer-open);
   background-repeat: no-repeat;
 }
 
@@ -164,7 +192,7 @@ img {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #572EE5;
+  background-color: var(--background-overlay);
   z-index: -1;
 }
 
@@ -233,14 +261,14 @@ img {
 }
 
 .main h1 {
-  color: #572EE5;
+  color: var(--color-text-blue);
   font-size: 25px;
   text-align: center;
   padding: 30px;
 }
 
 .main h2 {
-  color: #572EE5;
+  color: var(--color-text-blue);
   font-size: 20px;
   text-align: start;
   padding-top: 10px;
@@ -257,10 +285,11 @@ img {
   max-width: 80%;
   width: 550px;
   height: 50px;
-  border: 1px solid #572EE5;
+  border: 1px solid var(--color-text-blue);
   border-radius: 27px;
   border-radius: 27px;
-  background-image: url(/assets/icon-search.svg);
+  background-image: var(--search-icon);
+  background-color: var(--page-background);
   background-position: 95% 50%;
   background-repeat: no-repeat;
   padding-left: 55px;
@@ -282,7 +311,7 @@ img {
 }
 
 .main h3 {
-  color: #572EE5;
+  color: var(--color-text-blue);
   font-size: 18px;
   text-align: start;
   padding-top: 10px;
@@ -300,13 +329,13 @@ img {
 .main p {
   font-size: 16px;
   text-align: center;
-  color: #572EE5;
+  color: var(--color-text-black);
   margin-top: 0;
   padding: 5px;
 }
 
 .main button {
-  background-color: #fff;
+  background-color: var(--color-page-background);
   padding: 15px;
   color: #572EE5;
   border: 1px solid #572EE5;
@@ -317,7 +346,7 @@ img {
 }
 
 .trending {
-  background-color: #F3F5F8;
+  background-color: var(--bg-sec-trending);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -331,7 +360,7 @@ img {
 }
 
 .trending h2 {
-  color: #572EE5;
+  color: var(--color-text-blue);
   font-size: 25px;
   text-align: center;
   padding-top: 10px;
@@ -342,6 +371,7 @@ img {
 .trending p {
   font-family: 'Roboto', sans-serif;
   text-align: center;
+  color: var(--color-text-black);
 }
 
 footer {
@@ -361,6 +391,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: var(--color-text-black);
 }
 
 @media (max-width: 39.9375rem) {
@@ -411,19 +442,19 @@ footer .footer-icons-in {
 }
 
 footer .footer-icons-fb:hover {
-  background-image: url("/assets/icon_facebook_hover.svg");
+  background-image: var(--fb-icon-hover);
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
 footer .footer-icons-tw:hover {
-  background-image: url("/assets/icon-twitter-hover.svg");
+  background-image: var(--tw-icon-hover);
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
 footer .footer-icons-in:hover {
-  background-image: url("/assets/icon_instagram-hover.svg");
+  background-image: var(--in-icon-hover);
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }

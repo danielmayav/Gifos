@@ -1,5 +1,5 @@
 .trending {
-    background-color: $backgroundgray;
+    background-color: var(--bg-sec-trending);
     flex-direction: column;
     width: 100%;
     height: auto;
@@ -10,7 +10,7 @@
 
     
    h2 {
-      color: $darkblue;
+      color: var(--color-text-blue);
         font-size: 25px;
         text-align: center;
         padding-top: 10px;
@@ -21,6 +21,7 @@
    p {
     font-family: 'Roboto', sans-serif;
     text-align: center;
+    color: var(--color-text-black);
    }
     
 }

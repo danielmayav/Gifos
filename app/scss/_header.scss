@@ -10,10 +10,10 @@
     .hamburguer {
         width: 20px;
         height: 20px;
-        background-image: url(/assets/burger.svg);
+        background-image: var(--hamburguer-close);
         background-repeat: no-repeat;
         &:active {
-            background-image: url(/assets/close.svg);
+            background-image: var(--hamburguer-open);
             background-repeat: no-repeat;
         }
     }
@@ -23,16 +23,16 @@
         text-decoration: none;
         font-family: 'Roboto', sans-serif;
         font-size: 16px;
-        color: $darkblue;
+        color: var(--color-text-blue);
 
         &::after {
-            content: 'S';
+            content: 'GIFOS';
             font-size: 14px;
             position: relative;
-            bottom: 0.875rem; right: 3px;
+            bottom: 0.875rem; right: 2.1875rem;
             font-weight: bold;
             z-index: 4;
-            font-family: 'Roboto', sans-serif;
+            
         }
     }
 
@@ -48,7 +48,7 @@
         width: 500px;
         justify-content: space-evenly;
         font-size: 13px;
-        color: $darkblue;
+        color: var(--color-text-blue);
         font-weight: bold;
         list-style-type: none;
         margin: 0;
@@ -66,12 +66,11 @@
     .open-ham {
             width: 20px;
             height: 20px;
-            background-image: url(/assets/close.svg);
+            background-image: var(--hamburguer-open);
             background-repeat: no-repeat;
         }
 
     
-
 
 }
 
@@ -84,7 +83,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: $darkblue;
+    background-color: var(--background-overlay);
     z-index: -1;
         
             &-animation{

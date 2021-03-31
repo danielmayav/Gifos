@@ -8,6 +8,7 @@ html {
 }
 
 body {
+    background-color: var(--page-background);
     margin: 0;
     padding: 0;
     line-height: 1.2;
@@ -62,4 +63,36 @@ a:link, a:visited {
 img {
     max-width: 100%;
     height: auto;
+}
+
+
+// DARKMODE
+:root {
+    --page-background:      #{$white};
+    --color-text-blue:      #{$darkblue};
+    --color-text-black:     #{$black};
+    --hamburguer-close:     url('/assets/burger.svg');
+    --hamburguer-open:      url('/assets/close.svg');
+    --background-overlay:   #{$darkblue};
+    --bg-sec-trending:      #{$backgroundgray};
+    --search-icon:          url('/assets/icon-search.svg');
+    --fb-icon-hover:        url('/assets/icon_facebook_hover.svg');
+    --in-icon-hover:        url('/assets/icon_instagram-hover.svg');
+    --tw-icon-hover:        url('/assets/icon-twitter-hover.svg');
+}
+
+
+.dark {
+    --page-background: #{$dark-background};
+    --color-text-blue: #{$white};
+    --color-text-black: #{$white};
+    --hamburguer-close: url('/assets/burger-modo-noct.svg');
+    --hamburguer-open:  url('/assets/close-modo-noct.svg');
+    --background-overlay:   #{$black};
+    --bg-sec-trending:      #{$dark-background-2};
+    --search-icon:          url('/assets/icon-search-modo-noct.svg');
+    --fb-icon-hover:        url('/assets/icon_facebook_noc.svg');
+    --in-icon-hover:        url('/assets/icon_instagram_noc.svg');
+    --tw-icon-hover:        url('/assets/icon_twitter_noc.svg');
+    
 }

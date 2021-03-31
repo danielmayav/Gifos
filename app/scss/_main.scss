@@ -6,14 +6,14 @@
     width: 100%;
     
     h1 {
-        color: $darkblue;
+        color: var(--color-text-blue);
         font-size: 25px;
         text-align: center;
         padding: 30px;
     }
 
     h2 {
-        color: $darkblue;
+        color: var(--color-text-blue);
         font-size: 20px;
         text-align:start;
         padding-top: 10px;
@@ -30,10 +30,11 @@
         max-width: 80%;
         width: 550px;
         height: 50px;
-        border: 1px solid $darkblue;
+        border: 1px solid var(--color-text-blue);
         border-radius: 27px;
         border-radius: 27px;
-        background-image: url(/assets/icon-search.svg);
+        background-image: var(--search-icon);
+        background-color: var(--page-background);
         background-position: 95% 50%;
         background-repeat: no-repeat;
         padding-left: 55px;
@@ -55,7 +56,7 @@
     }
 
     h3 {
-        color: $darkblue;
+        color: var(--color-text-blue);
         font-size: 18px;
         text-align:start;
         padding-top: 10px;
@@ -76,13 +77,13 @@
     p {
         font-size: 16px;
         text-align: center;
-        color: $darkblue;
+        color: var(--color-text-black);
         margin-top: 0;
         padding: 5px;
     }
 
     button {
-        background-color: #fff;
+        background-color: var(--color-page-background);
         padding: 15px;
         color: $darkblue;
         border: 1px solid $darkblue;

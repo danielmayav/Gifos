@@ -8,6 +8,7 @@ footer {
     font-family: 'Roboto', sans-serif;
     align-content: center;
     align-items: center;
+    color: var(--color-text-black);
 
     @include breakpoint-down(small){
         flex-direction: column;
@@ -48,17 +49,17 @@ footer {
             // HOVER
 
         &-fb:hover {
-            background-image: url("/assets/icon_facebook_hover.svg");
+            background-image: var(--fb-icon-hover);
             background-repeat: no-repeat;
             background-position: 50% 50%;
             }
         &-tw:hover {
-            background-image: url("/assets/icon-twitter-hover.svg");
+            background-image: var(--tw-icon-hover);
             background-repeat: no-repeat;
             background-position: 50% 50%;
             }
         &-in:hover {
-            background-image: url("/assets/icon_instagram-hover.svg");
+            background-image: var(--in-icon-hover);
             background-repeat: no-repeat;
             background-position: 50% 50%;
             } 
