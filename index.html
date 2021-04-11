@@ -15,12 +15,14 @@
     <header class="header">
         <div class="overlay"></div>
         <nav class="nav flex flex-jc-sb flex-ai-c">
-            <a target="_self" href="/index.html" class="logo"> <img src="/assets/logo-mobile-modo-noct.svg" alt=""></a>
+            <a target="_self" href="/index.html" class="logo"> <img src="/assets/logo.svg" alt="logo"></a>
             <ul class="flex flex-ai-c hide-for-mobile" id="nav-links">
                 <li><a target="_self" href="#" id="modnoct-btn" onclick="diurnoNocturno()" >MODO NOCTURNO</a></li>
                 <li><a target="_blank" href="/html/favoritos.html">FAVORITOS</a></li>
                 <li><a target="_blank" href="/html/misgifos.html">MIS GIFOS</a></li>
-                <li><a target="_blank" href="/html/creargifo.html" class="hide-for-mobile"><img class="new-gif-logo" src="/assets/button-crear-gifo.svg" alt="crear gifo"></li></a>
+                <li><a target="_self" href="/html/creargifo.html" class="hide-for-mobile">
+                    <button class="new-gif-logo"></button>
+                </li></a>
             </ul>
             <a href="#" class="hamburguer hide-for-desktop" id="hamburguerBtn"></a>
             
@@ -42,11 +44,47 @@
     </section>
     </main>
 
-    <section class="trending flex flex-ai-c flex-jc-c">
+    <section class="trending flex">
+        <div class="trend-head">
+            <h2>Trending GIFOS</h2>
+            <p>Mira los últimos GIFOS de nuestra comunidad.</p>  
+        </div>
+              
+        
+        
+        <div class="next-gif hide-for-mobile"></div>
+        <div class="prev-gif hide-for-mobile"></div>            
+        
+        <div class="trend-container">
+                <div class="gif-cont">
+                    <!-- <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" alt=""> -->
+                    <div class="card-details">
+                        <div class="details-btns btn-fav"></div>
+                        <div class="details-btns btn-dwld"></div>
+                        <div class="details-btns btn-max"></div>
+                        <p>User</p>
+                        <h5>Titulo</h5>
+                    </div>
+                    
+                </div>
+                <div class="gif-cont">
+                    <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" alt="">
+                </div>
+                <div class="gif-cont">
+                    <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" alt="">
+                    
+                <div class="gif-cont">
+                    <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" alt="">
+                </div>
+                <div class="gif-cont">
+                    <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" alt="">
+                </div>
+                <div class="gif-cont">
+                    <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" alt="">
+                </div>
 
-        <h2>Trending GIFOS</h2>
-        <div class="trenginggifs"></div>
-        <p>Mira los últimos GIFOS de nuestra comunidad.</p>        
+        </div>
+        
 
     </section>
     

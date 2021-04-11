@@ -53,11 +53,31 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
+        li:hover {
+            text-decoration-line: underline;
+            text-decoration-color: $lightBlue;
+            text-decoration-thickness: 2px;
+            text-underline-position: under;
+            color: var(--color-text-blue);
+        }
+        li:visited {
+            color: var(--color-text-blue)
+        }
     }
 
-    ul .new-gif-logo{
-        width: 48px;
-        height: 48px;
+    .new-gif-logo{
+        width: 57px;
+        height: 57px;
+        background-image: var(--creargif-icon);
+        background-repeat: no-repeat;
+        border: 0;
+        cursor: pointer;
+        background-color: var(--page-background);
+        outline: none;
+        &:hover {
+            background-image: var(--creargif-hover);
+            background-repeat: no-repeat;
+        }
     }
 
     
@@ -71,7 +91,6 @@
         }
 
     
-
 }
 
 

@@ -33,8 +33,8 @@
         border: 1px solid var(--color-text-blue);
         border-radius: 27px;
         border-radius: 27px;
-        background-image: var(--search-icon);
         background-color: var(--page-background);
+        background-image: var(--search-icon);
         background-position: 95% 50%;
         background-repeat: no-repeat;
         padding-left: 55px;
@@ -43,10 +43,9 @@
         outline: none;
         &:focus {
             background-image: none;
+           
         }
-        &:focus::before {
-            content: url('/assets/icon-search-modo-noct.svg');
-        }
+        
         
     }
 

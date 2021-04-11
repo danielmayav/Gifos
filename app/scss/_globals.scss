@@ -66,7 +66,7 @@ img {
 }
 
 
-// DARKMODE
+// DARKMODE VARIABLES
 :root {
     --page-background:      #{$white};
     --color-text-blue:      #{$darkblue};
@@ -79,20 +79,39 @@ img {
     --fb-icon-hover:        url('/assets/icon_facebook_hover.svg');
     --in-icon-hover:        url('/assets/icon_instagram-hover.svg');
     --tw-icon-hover:        url('/assets/icon-twitter-hover.svg');
+    --creargif-icon:        url('/assets/button-crear-gifo.svg');
+    --creargif-hover:       url('/assets//CTA-crear-gifo-hover.svg');
+    --btn-slider-lf:        url('/assets/button-slider-left.svg');
+    --btn-slider-lf-ho:     url('/assets/button-slider-left-hover.svg');
+    --btn-slider-rgh:       url('/assets/Button-Slider-right.svg');
+    --btn-slider-rgh-ho:    url('/assets/Button-Slider-right-hover.svg');
+    --btn-fav:              url('/assets/icon-fav.svg');
+    --btn-fav-ho:           url('/assets/icon-fav-hover.svg');
+    --btn-fav-act:          url('/assets/icon-fav-active.svg');
+    --btn-dwld:             url('/assets/icon-download.svg');
+    --btn-dwld-ho:          url('/assets/icon-download-hover.svg');
+    --btn-max:              url('/assets/icon-max-normal.svg');
+    --btn-max-ho:           url('/assets/icon-max-hover.svg');
+
 }
 
 
 .dark {
-    --page-background: #{$dark-background};
-    --color-text-blue: #{$white};
-    --color-text-black: #{$white};
-    --hamburguer-close: url('/assets/burger-modo-noct.svg');
-    --hamburguer-open:  url('/assets/close-modo-noct.svg');
+    --page-background:      #{$dark-background};
+    --color-text-blue:      #{$white};
+    --color-text-black:     #{$white};
+    --hamburguer-close:     url('/assets/burger-modo-noct.svg');
+    --hamburguer-open:      url('/assets/close-modo-noct.svg');
     --background-overlay:   #{$black};
     --bg-sec-trending:      #{$dark-background-2};
     --search-icon:          url('/assets/icon-search-modo-noct.svg');
     --fb-icon-hover:        url('/assets/icon_facebook_noc.svg');
     --in-icon-hover:        url('/assets/icon_instagram_noc.svg');
     --tw-icon-hover:        url('/assets/icon_twitter_noc.svg');
-    
+    --creargif-icon:        url('/assets/CTA-crear-gifo-modo-noc.svg');
+    --creargif-hover:       url('/assets//CTA-crear-gifo-hover-modo-noc.svg');
+    --btn-slider-lf:        url('/assets/button-slider-left-md-noct.svg');
+    --btn-slider-lf-ho:     url('/assets/button-slider-left-hover.svg');
+    --btn-slider-rgh:       url('/assets/button-slider-right-md-noct.svg');
+    --btn-slider-rgh-ho:    url('/assets/Button-Slider-right-hover.svg');
 }

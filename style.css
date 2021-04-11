@@ -100,20 +100,39 @@ img {
   --fb-icon-hover:        url('/assets/icon_facebook_hover.svg');
   --in-icon-hover:        url('/assets/icon_instagram-hover.svg');
   --tw-icon-hover:        url('/assets/icon-twitter-hover.svg');
+  --creargif-icon:        url('/assets/button-crear-gifo.svg');
+  --creargif-hover:       url('/assets//CTA-crear-gifo-hover.svg');
+  --btn-slider-lf:        url('/assets/button-slider-left.svg');
+  --btn-slider-lf-ho:     url('/assets/button-slider-left-hover.svg');
+  --btn-slider-rgh:       url('/assets/Button-Slider-right.svg');
+  --btn-slider-rgh-ho:    url('/assets/Button-Slider-right-hover.svg');
+  --btn-fav:              url('/assets/icon-fav.svg');
+  --btn-fav-ho:           url('/assets/icon-fav-hover.svg');
+  --btn-fav-act:          url('/assets/icon-fav-active.svg');
+  --btn-dwld:             url('/assets/icon-download.svg');
+  --btn-dwld-ho:          url('/assets/icon-download-hover.svg');
+  --btn-max:              url('/assets/icon-max-normal.svg');
+  --btn-max-ho:           url('/assets/icon-max-hover.svg');
 }
 
 .dark {
-  --page-background: #37383C;
-  --color-text-blue: #FFFFFF;
-  --color-text-black: #FFFFFF;
-  --hamburguer-close: url('/assets/burger-modo-noct.svg');
-  --hamburguer-open:  url('/assets/close-modo-noct.svg');
+  --page-background:      #37383C;
+  --color-text-blue:      #FFFFFF;
+  --color-text-black:     #FFFFFF;
+  --hamburguer-close:     url('/assets/burger-modo-noct.svg');
+  --hamburguer-open:      url('/assets/close-modo-noct.svg');
   --background-overlay:   #000000;
   --bg-sec-trending:      #222326;
   --search-icon:          url('/assets/icon-search-modo-noct.svg');
   --fb-icon-hover:        url('/assets/icon_facebook_noc.svg');
   --in-icon-hover:        url('/assets/icon_instagram_noc.svg');
   --tw-icon-hover:        url('/assets/icon_twitter_noc.svg');
+  --creargif-icon:        url('/assets/CTA-crear-gifo-modo-noc.svg');
+  --creargif-hover:       url('/assets//CTA-crear-gifo-hover-modo-noc.svg');
+  --btn-slider-lf:        url('/assets/button-slider-left-md-noct.svg');
+  --btn-slider-lf-ho:     url('/assets/button-slider-left-hover.svg');
+  --btn-slider-rgh:       url('/assets/button-slider-right-md-noct.svg');
+  --btn-slider-rgh-ho:    url('/assets/Button-Slider-right-hover.svg');
 }
 
 .header .nav {
@@ -173,9 +192,34 @@ img {
   padding: 0;
 }
 
-.header ul .new-gif-logo {
-  width: 48px;
-  height: 48px;
+.header ul li:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-color: #50E3C2;
+          text-decoration-color: #50E3C2;
+  text-decoration-thickness: 2px;
+  text-underline-position: under;
+  color: var(--color-text-blue);
+}
+
+.header ul li:visited {
+  color: var(--color-text-blue);
+}
+
+.header .new-gif-logo {
+  width: 57px;
+  height: 57px;
+  background-image: var(--creargif-icon);
+  background-repeat: no-repeat;
+  border: 0;
+  cursor: pointer;
+  background-color: var(--page-background);
+  outline: none;
+}
+
+.header .new-gif-logo:hover {
+  background-image: var(--creargif-hover);
+  background-repeat: no-repeat;
 }
 
 .header .open-ham {
@@ -288,8 +332,8 @@ img {
   border: 1px solid var(--color-text-blue);
   border-radius: 27px;
   border-radius: 27px;
-  background-image: var(--search-icon);
   background-color: var(--page-background);
+  background-image: var(--search-icon);
   background-position: 95% 50%;
   background-repeat: no-repeat;
   padding-left: 55px;
@@ -300,10 +344,6 @@ img {
 
 .main input:focus {
   background-image: none;
-}
-
-.main input:focus::before {
-  content: url("/assets/icon-search-modo-noct.svg");
 }
 
 .main img {
@@ -352,11 +392,17 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  height: auto;
+  height: 400px;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
+  position: relative;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .trending h2 {
@@ -364,7 +410,7 @@ img {
   font-size: 25px;
   text-align: center;
   padding-top: 10px;
-  padding-bottom: 30px;
+  padding-bottom: 0;
   margin: 0;
 }
 
@@ -372,6 +418,119 @@ img {
   font-family: 'Roboto', sans-serif;
   text-align: center;
   color: var(--color-text-black);
+}
+
+.trending .next-gif {
+  position: absolute;
+  right: .5%;
+  top: 60%;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-image: var(--btn-slider-rgh);
+  background-repeat: no-repeat;
+  background-color: var(--bg-sec-trending);
+  cursor: pointer;
+  z-index: 4;
+}
+
+.trending .next-gif:hover {
+  background-image: var(--btn-slider-rgh-ho);
+  background-repeat: no-repeat;
+}
+
+.trending .prev-gif {
+  position: absolute;
+  left: .5%;
+  top: 60%;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-image: var(--btn-slider-lf);
+  background-color: var(--bg-sec-trending);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.trending .prev-gif:hover {
+  background-image: var(--btn-slider-lf-ho);
+  background-repeat: no-repeat;
+}
+
+.trending .trend-container {
+  overflow-x: auto;
+  width: 100%;
+  display: inherit;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: auto;
+  height: 255px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 20px;
+  scrollbar-width: none;
+}
+
+.trending .trend-container::-webkit-scrollbar {
+  display: none;
+}
+
+.trending .trend-container .gif-cont {
+  padding: 0;
+  min-width: 24%;
+  margin: 0 50px 0 50px;
+  position: relative;
+  left: 0;
+  height: 250px;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 39.9375rem) {
+  .trending .trend-container .gif-cont {
+    min-width: 49%;
+    margin: 0 20px 0 20px;
+  }
+}
+
+.trending .trend-container .gif-cont img {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: -2;
+}
+
+.card-details {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  /* &:not(:hover) {
+      display:none
+   } */
+}
+
+.card-details .details-btns {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  z-index: 2;
+  justify-items: right;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+  cursor: pointer;
+  color: red;
+}
+
+.card-details .details-btns .btn-fav {
+  background-image: var(--btn-fav);
+  background-repeat: no-repeat;
 }
 
 footer {
