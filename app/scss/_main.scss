@@ -25,29 +25,57 @@
     b {
         color: $lightBlue;
     }
-    
-    input {
-        max-width: 80%;
-        width: 550px;
-        height: 50px;
-        border: 1px solid var(--color-text-blue);
-        border-radius: 27px;
-        border-radius: 27px;
-        background-color: var(--page-background);
-        background-image: var(--search-icon);
-        background-position: 95% 50%;
-        background-repeat: no-repeat;
-        padding-left: 55px;
-        font-size: 16px;
-        font-family: 'Roboto', sans-serif;
-        outline: none;
-        &:focus {
-            background-image: none;
-           
+
+    .searchbar {
+        width: 100vw;
+        display: grid;
+        place-items: center;
+        position: relative;
+
+        .search-btn{
+            background-color: var(--color-page-background);
+            height: 30px;
+            width: 30px;
+            background-image: var(--search-icon);
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            right: 30vw;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            
         }
-        
-        
+
+        input {
+            align-self: center;
+            max-width: 80%;
+            width: 45vw;
+            min-width: 100px;
+            height: 50px;
+            border: 1px solid var(--color-text-blue);
+            border-radius: 27px;
+            border-radius: 27px;
+            background-color: var(--page-background);
+            background-position: 95% 50%;
+            background-repeat: no-repeat;
+            padding: 0 40px;
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            outline: none;
+            text-indent: 20px;
+            &:focus {
+                background-image: none;
+                 
+            }
+            
+            
+        }
+
+
     }
+    
+    
 
 
     img {
@@ -81,7 +109,7 @@
         padding: 5px;
     }
 
-    button {
+    .button {
         background-color: var(--color-page-background);
         padding: 15px;
         color: $darkblue;
@@ -92,5 +120,9 @@
         margin-top: 20px;
         
     }
+    
+
+
 
 }
+

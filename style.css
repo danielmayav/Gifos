@@ -325,24 +325,50 @@ img {
   color: #50E3C2;
 }
 
-.main input {
+.main .searchbar {
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.main .searchbar .search-btn {
+  background-color: var(--color-page-background);
+  height: 30px;
+  width: 30px;
+  background-image: var(--search-icon);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 30vw;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.main .searchbar input {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   max-width: 80%;
-  width: 550px;
+  width: 45vw;
+  min-width: 100px;
   height: 50px;
   border: 1px solid var(--color-text-blue);
   border-radius: 27px;
   border-radius: 27px;
   background-color: var(--page-background);
-  background-image: var(--search-icon);
   background-position: 95% 50%;
   background-repeat: no-repeat;
-  padding-left: 55px;
+  padding: 0 40px;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
   outline: none;
+  text-indent: 20px;
 }
 
-.main input:focus {
+.main .searchbar input:focus {
   background-image: none;
 }
 
@@ -374,7 +400,7 @@ img {
   padding: 5px;
 }
 
-.main button {
+.main .button {
   background-color: var(--color-page-background);
   padding: 15px;
   color: #572EE5;
@@ -459,11 +485,12 @@ img {
 .trending .trend-container {
   overflow-x: auto;
   width: 100%;
-  display: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow-x: auto;
   height: 255px;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -477,15 +504,18 @@ img {
 
 .trending .trend-container .gif-cont {
   padding: 0;
+  width: 350px;
   min-width: 24%;
   margin: 0 50px 0 50px;
   position: relative;
   left: 0;
   height: 250px;
-  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-image: url(https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif);
 }
 
 @media (max-width: 39.9375rem) {
@@ -495,13 +525,17 @@ img {
   }
 }
 
+.trending .trend-container .gif-cont:hover {
+  background-blend-mode: screen;
+  background-color: #572EE5;
+}
+
 .trending .trend-container .gif-cont img {
   overflow: hidden;
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  z-index: -2;
 }
 
 .card-details {
@@ -509,13 +543,13 @@ img {
   height: 100%;
   position: absolute;
   z-index: 1;
-  display: block;
-  /* &:not(:hover) {
-      display:none
-   } */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
 }
 
-.card-details .details-btns {
+.details-btns {
   width: 32px;
   height: 32px;
   border-radius: 6px;
@@ -525,10 +559,9 @@ img {
       -ms-flex-align: right;
           align-items: right;
   cursor: pointer;
-  color: red;
 }
 
-.card-details .details-btns .btn-fav {
+.btn-fav {
   background-image: var(--btn-fav);
   background-repeat: no-repeat;
 }

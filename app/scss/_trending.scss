@@ -63,30 +63,38 @@
    .trend-container {
       overflow-x: auto;
       width: 100%;
-      display: inherit;
+      display: flex;
       align-items: center;
-      overflow-x: auto;
       height: 255px;
       align-content: center;
       margin-top: 20px;
       scrollbar-width: none;
       
-         &::-webkit-scrollbar {
+      &::-webkit-scrollbar {
             display: none;
-         }
+      }
+      
          .gif-cont {
             padding: 0;
+            width: 350px;
             min-width: 24%;
             margin: 0 50px 0 50px;
             position: relative;
             left: 0;
             height: 250px;
-            z-index: 1;
             display: flex;
+            transition: 0.5s;
+            background-image: url(https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif);
             
             @include breakpoint-down(small){
                min-width: 49%;
                margin: 0 20px 0 20px;
+            }
+
+            &:hover {
+               background-blend-mode: screen;
+               background-color: $darkblue;
+               
             }
 
             img {
@@ -95,14 +103,14 @@
                height: 100%;
                margin: 0;
                padding: 0;
-               z-index: -2;
+               //z-index: -2;
             };
+
+            
             
          };
    }
 
-    
-   
    
 }
 
@@ -111,32 +119,22 @@
    height: 100%;
    position: absolute;
    z-index: 1;
-   // background-color: $darkblue;
-   // opacity: 0.8;
-   display: block;
-
-   /* &:not(:hover) {
-      display:none
-   } */
-  
-   
-   .details-btns {
-      width: 32px;
-      height: 32px;
-      border-radius: 6px;
-      z-index: 2;
-      justify-items: right;
-      align-items: right;
-      cursor: pointer;
-      color: red;
-
-      .btn-fav{
-         background-image: var(--btn-fav);
-         background-repeat: no-repeat;
-      }
-
-
-   }
-
-
+   display: flex;
+   padding: 20px;
 }
+      
+.details-btns {
+   width: 32px;
+   height: 32px;
+   border-radius: 6px;
+   z-index: 2;
+   justify-items: right;
+   align-items: right;
+   cursor: pointer;
+      //background-color: red;
+   };
+
+.btn-fav{
+   background-image: var(--btn-fav);
+   background-repeat: no-repeat;
+      };
