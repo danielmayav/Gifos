@@ -1,0 +1,24 @@
+.card-details {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    padding: 20px;
+ }
+       
+ .details-btns {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    z-index: 2;
+    justify-items: right;
+    align-items: right;
+    cursor: pointer;
+       //background-color: red;
+    };
+ 
+ .btn-fav{
+    background-image: var(--btn-fav);
+    background-repeat: no-repeat;
+       };
+ 

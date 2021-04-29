@@ -1,3 +1,50 @@
+:root {
+  --page-background:      #FFFFFF;
+  --color-text-blue:      #572EE5;
+  --color-text-black:     #000000;
+  --hamburguer-close:     url('/assets/burger.svg');
+  --hamburguer-open:      url('/assets/close.svg');
+  --background-overlay:   #572EE5;
+  --bg-sec-trending:      #F3F5F8;
+  --search-icon:          url('/assets/icon-search.svg');
+  --fb-icon-hover:        url('/assets/icon_facebook_hover.svg');
+  --in-icon-hover:        url('/assets/icon_instagram-hover.svg');
+  --tw-icon-hover:        url('/assets/icon-twitter-hover.svg');
+  --creargif-icon:        url('/assets/button-crear-gifo.svg');
+  --creargif-hover:       url('/assets//CTA-crear-gifo-hover.svg');
+  --btn-slider-lf:        url('/assets/button-slider-left.svg');
+  --btn-slider-lf-ho:     url('/assets/button-slider-left-hover.svg');
+  --btn-slider-rgh:       url('/assets/Button-Slider-right.svg');
+  --btn-slider-rgh-ho:    url('/assets/Button-Slider-right-hover.svg');
+  --btn-fav:              url('/assets/icon-fav.svg');
+  --btn-fav-ho:           url('/assets/icon-fav-hover.svg');
+  --btn-fav-act:          url('/assets/icon-fav-active.svg');
+  --btn-dwld:             url('/assets/icon-download.svg');
+  --btn-dwld-ho:          url('/assets/icon-download-hover.svg');
+  --btn-max:              url('/assets/icon-max-normal.svg');
+  --btn-max-ho:           url('/assets/icon-max-hover.svg');
+}
+
+.dark {
+  --page-background:      #37383C;
+  --color-text-blue:      #FFFFFF;
+  --color-text-black:     #FFFFFF;
+  --hamburguer-close:     url('/assets/burger-modo-noct.svg');
+  --hamburguer-open:      url('/assets/close-modo-noct.svg');
+  --background-overlay:   #000000;
+  --bg-sec-trending:      #222326;
+  --search-icon:          url('/assets/icon-search-modo-noct.svg');
+  --fb-icon-hover:        url('/assets/icon_facebook_noc.svg');
+  --in-icon-hover:        url('/assets/icon_instagram_noc.svg');
+  --tw-icon-hover:        url('/assets/icon_twitter_noc.svg');
+  --creargif-icon:        url('/assets/CTA-crear-gifo-modo-noc.svg');
+  --creargif-hover:       url('/assets//CTA-crear-gifo-hover-modo-noc.svg');
+  --btn-slider-lf:        url('/assets/button-slider-left-md-noct.svg');
+  --btn-slider-lf-ho:     url('/assets/button-slider-left-hover.svg');
+  --btn-slider-rgh:       url('/assets/button-slider-right-md-noct.svg');
+  --btn-slider-rgh-ho:    url('/assets/Button-Slider-right-hover.svg');
+}
+
 @-webkit-keyframes fade-in {
   from {
     opacity: 0;
@@ -88,51 +135,8 @@ img {
   height: auto;
 }
 
-:root {
-  --page-background:      #FFFFFF;
-  --color-text-blue:      #572EE5;
-  --color-text-black:     #000000;
-  --hamburguer-close:     url('/assets/burger.svg');
-  --hamburguer-open:      url('/assets/close.svg');
-  --background-overlay:   #572EE5;
-  --bg-sec-trending:      #F3F5F8;
-  --search-icon:          url('/assets/icon-search.svg');
-  --fb-icon-hover:        url('/assets/icon_facebook_hover.svg');
-  --in-icon-hover:        url('/assets/icon_instagram-hover.svg');
-  --tw-icon-hover:        url('/assets/icon-twitter-hover.svg');
-  --creargif-icon:        url('/assets/button-crear-gifo.svg');
-  --creargif-hover:       url('/assets//CTA-crear-gifo-hover.svg');
-  --btn-slider-lf:        url('/assets/button-slider-left.svg');
-  --btn-slider-lf-ho:     url('/assets/button-slider-left-hover.svg');
-  --btn-slider-rgh:       url('/assets/Button-Slider-right.svg');
-  --btn-slider-rgh-ho:    url('/assets/Button-Slider-right-hover.svg');
-  --btn-fav:              url('/assets/icon-fav.svg');
-  --btn-fav-ho:           url('/assets/icon-fav-hover.svg');
-  --btn-fav-act:          url('/assets/icon-fav-active.svg');
-  --btn-dwld:             url('/assets/icon-download.svg');
-  --btn-dwld-ho:          url('/assets/icon-download-hover.svg');
-  --btn-max:              url('/assets/icon-max-normal.svg');
-  --btn-max-ho:           url('/assets/icon-max-hover.svg');
-}
-
-.dark {
-  --page-background:      #37383C;
-  --color-text-blue:      #FFFFFF;
-  --color-text-black:     #FFFFFF;
-  --hamburguer-close:     url('/assets/burger-modo-noct.svg');
-  --hamburguer-open:      url('/assets/close-modo-noct.svg');
-  --background-overlay:   #000000;
-  --bg-sec-trending:      #222326;
-  --search-icon:          url('/assets/icon-search-modo-noct.svg');
-  --fb-icon-hover:        url('/assets/icon_facebook_noc.svg');
-  --in-icon-hover:        url('/assets/icon_instagram_noc.svg');
-  --tw-icon-hover:        url('/assets/icon_twitter_noc.svg');
-  --creargif-icon:        url('/assets/CTA-crear-gifo-modo-noc.svg');
-  --creargif-hover:       url('/assets//CTA-crear-gifo-hover-modo-noc.svg');
-  --btn-slider-lf:        url('/assets/button-slider-left-md-noct.svg');
-  --btn-slider-lf-ho:     url('/assets/button-slider-left-hover.svg');
-  --btn-slider-rgh:       url('/assets/button-slider-right-md-noct.svg');
-  --btn-slider-rgh-ho:    url('/assets/Button-Slider-right-hover.svg');
+.no-display {
+  display: none;
 }
 
 .header .nav {
@@ -395,7 +399,7 @@ img {
 .main p {
   font-size: 16px;
   text-align: center;
-  color: var(--color-text-black);
+  color: var(--color-text-blue);
   margin-top: 0;
   padding: 5px;
 }
@@ -418,7 +422,7 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  height: 400px;
+  height: 90vh;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 20px;
@@ -429,6 +433,10 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.trending .trend-head {
+  margin-bottom: 40px;
 }
 
 .trending h2 {
@@ -491,6 +499,9 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 255px;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -504,18 +515,12 @@ img {
 
 .trending .trend-container .gif-cont {
   padding: 0;
-  width: 350px;
+  width: 25vw;
   min-width: 24%;
-  margin: 0 50px 0 50px;
-  position: relative;
-  left: 0;
-  height: 250px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin: 0 20px 0 20px;
+  height: 38vh;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-image: url(https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif);
 }
 
 @media (max-width: 39.9375rem) {
@@ -530,39 +535,33 @@ img {
   background-color: #572EE5;
 }
 
-.trending .trend-container .gif-cont img {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+.trend-1 {
+  background-image: url(https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif);
+  background-repeat: no-repeat;
 }
 
-.card-details {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 20px;
+.trend-2 {
+  background-image: url(https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif);
+  background-repeat: no-repeat;
 }
 
-.details-btns {
-  width: 32px;
-  height: 32px;
-  border-radius: 6px;
-  z-index: 2;
-  justify-items: right;
-  -webkit-box-align: right;
-      -ms-flex-align: right;
-          align-items: right;
-  cursor: pointer;
+.trend-3 {
+  background-image: url(https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif);
+  background-repeat: no-repeat;
 }
 
-.btn-fav {
-  background-image: var(--btn-fav);
+.trend-4 {
+  background-image: url(https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif);
+  background-repeat: no-repeat;
+}
+
+.trend-5 {
+  background-image: url(https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif);
+  background-repeat: no-repeat;
+}
+
+.trend-6 {
+  background-image: url(https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif);
   background-repeat: no-repeat;
 }
 
@@ -649,6 +648,31 @@ footer .footer-icons-in:hover {
   background-image: var(--in-icon-hover);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+}
+
+.card-details {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  padding: 20px;
+}
+
+.details-btns {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  z-index: 2;
+  justify-items: right;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+  cursor: pointer;
+}
+
+.btn-fav {
+  background-image: var(--btn-fav);
+  background-repeat: no-repeat;
 }
 
 .camera-container {

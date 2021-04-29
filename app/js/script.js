@@ -9,7 +9,7 @@ const navLinks = document.querySelector('#nav-links');
 const main = document.querySelector('.main');
 const searchBar = document.querySelector('#searchBar');
 const searchBtn = document.querySelector('#searchBtn');
-const apiKey = 'qgKLO2sdzTr5Cniqn4m1BUGs6UiWP5bl';
+
 
 hamburguerBtn.addEventListener('click', function(){
     console.log('click hamburguer');
