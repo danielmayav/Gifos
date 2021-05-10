@@ -415,6 +415,11 @@ img {
   margin-top: 20px;
 }
 
+.gif {
+  max-width: 250px;
+  height: 250px;
+}
+
 .trending {
   background-color: var(--bg-sec-trending);
   -webkit-box-orient: vertical;
