@@ -9,7 +9,7 @@ const navLinks = document.querySelector('#nav-links');
 const main = document.querySelector('.main');
 const searchBar = document.querySelector('#searchBar');
 const searchBtn = document.querySelector('#searchBtn');
-
+const searchGif = document.querySelector('#searchGif');
 
 hamburguerBtn.addEventListener('click', function(){
     console.log('click hamburguer');
@@ -33,14 +33,16 @@ hamburguerBtn.addEventListener('click', function(){
 });
 
 // =====  SEARCH BAR BUTTON STYLE
+
 searchBar.addEventListener('focus', () => {
   searchBtn.style.right =""
   searchBtn.style.left ="30vw"
-  searchBar.addEventListener('blur', ()=> {
-    searchBtn.style.left =""
-    searchBtn.style.right ="30vw"
-  })
 })
+/* searchBar.addEventListener('blur', ()=> {
+  searchBtn.style.left =""
+  searchBtn.style.right ="30vw"
+  }) */
+
 
 // MODO NOCTURNO
 

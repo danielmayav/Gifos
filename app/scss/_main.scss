@@ -7,19 +7,20 @@
     
     h1 {
         color: var(--color-text-blue);
-        font-size: 25px;
+        font-size: 35px;
         text-align: center;
         padding: 30px;
     }
 
     h2 {
         color: var(--color-text-blue);
-        font-size: 20px;
-        text-align:start;
+        font-size: 35px;
+        text-align:center;
         padding-top: 10px;
         padding-bottom: 20px;
         margin-top: 0;
         border-top: 0;
+        text-transform: initial;
     }
 
     b {
@@ -112,21 +113,37 @@
     .button {
         background-color: var(--color-page-background);
         padding: 15px;
-        color: $darkblue;
-        border: 1px solid $darkblue;
+        color: var(--color-text-blue);
+        border: 1px solid var(--color-text-blue);
         border-radius: 25px;
         width: 7.5rem;
         height: auto;
         margin-top: 20px;
+        cursor: pointer;
         
     }
     
-
+    .results {
+        
+        margin-top: 30px;
+        h2 {
+            text-transform: uppercase;
+        }
+    }
+    
+    .gif {
+        max-width: 300px;
+        height: 250px;
+        &:hover::before {
+            content:'';
+            background-blend-mode: screen;
+            background-color: rgba(87, 46, 229, 0.7)
+            
+         }
+    }
 
 
 }
 
-.gif {
-    max-width: 250px;
-    height: 250px;
-}
+
+
