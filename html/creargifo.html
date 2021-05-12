@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
 
-    <title>Gifos</title>
+    <title>New Gif</title>
 </head>
 <body>
     <header class="header">
@@ -38,20 +38,21 @@
             <img class="luzcamara" src="/assets/element-luz-camara.svg" alt="">
         </div>
         <div class="video-cont">
-            <video src=""></video>
+            <video src="" width="640px" height="360px" id="video"></video>
         </div>
     </div>
 
 <div class="btns-container flex">
 <div class="vid-buttons flex flex-ai-c">
-    <button class=" vid-btn ">1</button>
-    <button class=" vid-btn ">2</button>
-    <button class=" vid-btn ">3</button>
+    <div class="progres">1</div>
+    <div class="progres">2</div>
+    <div class="progres">3</div>
+    
     
     </div>
     <img src="/assets/pelicula.svg" alt="">
     <span></span>
-    <button class="video-btn">Comenzar</button>
+    <button class="video-btn" id="start">Comenzar</button>
 </div>
 
     </main>
@@ -76,6 +77,7 @@
 
     </footer>
 
-    <script src="/app/js/script.js"></script>
+    <script src="/app/js/darkmode.js"></script>
+    <script src="/app/js/newgif.js"></script>
 </body>
 </html>

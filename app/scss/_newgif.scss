@@ -15,6 +15,7 @@
         width: 2.875rem;
        height: 2.875rem; 
        z-index: 1;
+       background-color: var(--page-background);
     }
     .cinta2{
         position: relative;
@@ -23,6 +24,8 @@
         width: 3.975rem;
         height: 3.975rem; 
         z-index: 1;
+       background-color: var(--page-background);
+
     }
     .camara{
         position: relative;
@@ -30,13 +33,15 @@
         left: 15px;
        width: 6.0125rem;
        height: 6.5312rem;
-       z-index: -1; 
+       z-index: -1;
+       background-color: var(--page-background);
+
     }
     .luzcamara{
         position: relative;
         bottom: 160px;
         left: 115px;
-
+       background-color: var(--page-background);
        width: 5.6875rem;
        height: 9.4375rem; 
     }
@@ -50,10 +55,17 @@
     left: 28%;
     width: 43rem;
     height: 24.375rem;
-    border: 1px solid $darkblue;
+    border: 1px solid var(--color-text-blue);
     margin: 0;
-}
+    display: grid;
+    place-items: center;
 
+    video {
+        max-width: 90%;
+        max-height: 90%;
+        
+    }
+}
 
 .btns-container {
 flex-direction: column;
@@ -69,23 +81,26 @@ flex-wrap: wrap;
     max-width: 43rem;
     align-content: space-around;
     height: 70px;
+    background-color: var(--page-background);
+
+
     
-    
-    button {
-        background-color: #fff;
+    .progres {
         padding: 8px;
-        color: $darkblue;
-        border: 1px solid $darkblue;
+        color: var(--color-text-blue);
+        border: 1px solid var(--color-text-blue);
         border-radius: 50%;
         width: auto;
         height: auto;
         text-align: center;
         margin-left: 20px;
         margin-right: 20px;
+       background-color: var(--page-background);
+        
     }
-    
+}
    
-} 
+ 
 
 .btns-container img {
         position:absolute;
@@ -95,20 +110,25 @@ flex-wrap: wrap;
     }
 
 span {
-    border: 3px solid $darkblue;
+    border: 3px solid var(--color-text-blue);
     width: 65%;
     align-self: center;
     justify-self: center;
 }
 
 .video-btn {
-    background-color: #fff;
-        padding: 15px;
-        color: $darkblue;
-        border: 1px solid $darkblue;
-        border-radius: 25px;
-        width: 7.5rem;
-        height: auto;
-        margin-top: 20px;
+    background-color: var(--page-background);
+    padding: 15px;
+    color: var(--color-text-blue);
+    border: 1px solid var(--color-text-blue);
+    border-radius: 25px;
+    width: 7.5rem;
+    height: auto;
+    margin-top: 20px;
+    cursor: pointer;
+    &:hover{
+        background-color: var(--color-text-blue);
+        color: var(--page-background)
+    }
 }
 
