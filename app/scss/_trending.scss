@@ -79,61 +79,10 @@
             display: none;
       }
       
-      .gif-cont {
-            padding: 0;
-            width: 25vw;
-            min-width: 24%;
-            margin: 0 20px 0 20px;
-            height: 38vh;
-            transition: 0.5s;
-            
-            @include breakpoint-down(small){
-               min-width: 49%;
-               margin: 0 20px 0 20px;
-            }
-
-            &:hover {
-               background-blend-mode: screen;
-               background-color: $darkblue;
-               
-            }
-
-         }
+      
 
             
          };
    
 };
-
-// TRENDING GIFS
-
-.trend-1 {
-   background-image: url(https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif);
-   background-repeat: no-repeat;
-}
-
-.trend-2 {
-   background-image: url(https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif);
-   background-repeat: no-repeat;
-}
-
-.trend-3 {
-   background-image: url(https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif);
-   background-repeat: no-repeat;
-}
-
-.trend-4 {
-   background-image: url(https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif);
-   background-repeat: no-repeat;
-}
-
-.trend-5 {
-   background-image: url(https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif);
-   background-repeat: no-repeat;
-}
-
-.trend-6 {
-   background-image: url(https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif);
-   background-repeat: no-repeat;
-}
 

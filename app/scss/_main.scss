@@ -124,25 +124,14 @@
     }
     
     .results {
-        
+        display: flex;
+        flex-wrap: wrap;
         margin-top: 30px;
         h2 {
             text-transform: uppercase;
         }
     }
     
-    .gif {
-        max-width: 300px;
-        height: 250px;
-        &:hover::before {
-            content:'';
-            background-blend-mode: screen;
-            background-color: rgba(87, 46, 229, 0.7)
-            
-         }
-    }
-
-
 }
 
 

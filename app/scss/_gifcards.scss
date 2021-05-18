@@ -1,24 +1,100 @@
+.gif-cont {
+   padding: 0;
+   width: 25vw;
+   min-width: 24%;
+   margin: 0 20px 0 20px;
+   height: 38vh;
+   transition: 0.5s;
+   background-position: center;
+   background-repeat: no-repeat;
+   &:hover {
+      background-blend-mode: screen;
+      background-color: $darkblue;
+      
+   }
+
+   }
+
+
 .card-details {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: relative;
     z-index: 1;
-    padding: 20px;
+    padding: 0;
+    justify-content: end;
+    display: flex;
+    justify-content: flex-end;
+
+    &__btn {
+      margin: 15px 5px 0 5px;
+      width: 2rem;
+      height: 2rem;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: 0.3s;
+      }
+      .__fav{
+         background-image: var(--btn-fav);
+          background-repeat: no-repeat;
+          opacity: 0.7;
+          &:hover {
+            background-image: var(--btn-fav-ho);
+            background-repeat: no-repeat;
+            opacity: 1;
+          }
+         }
+       .__dwld{
+         background-image: var(--btn-dwld);
+          background-repeat: no-repeat;
+          opacity: 0.7;
+          &:hover {
+            background-image: var(--btn-dwld-ho);
+            background-repeat: no-repeat;
+            opacity: 1;
+          }
+         }
+       .__expand{
+         background-image: var(--btn-max);
+          background-repeat: no-repeat;
+          opacity: 0.7;
+          &:hover {
+            background-image: var(--btn-max-ho);
+            background-repeat: no-repeat;
+            opacity: 1;
+          }
+         }
+      &__text {
+         position:absolute;
+         bottom: 20px; left: 20px;
+         width: auto;
+         color: $white;
+         p {
+            padding: 5px;
+            margin: 2px;
+            color: $white;
+            font-size: 15px;
+         }
+         h5 {
+            padding: 5px;
+            margin: 2px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1em;
+         }
+       }
+
+       
+    
  }
        
- .details-btns {
-    width: 32px;
-    height: 32px;
-    border-radius: 6px;
-    z-index: 2;
-    justify-items: right;
-    align-items: right;
-    cursor: pointer;
-       //background-color: red;
-    };
  
- .btn-fav{
-    background-image: var(--btn-fav);
-    background-repeat: no-repeat;
-       };
+
  
+
+       
+   
+   
+         
+   
