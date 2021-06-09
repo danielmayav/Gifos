@@ -1,6 +1,3 @@
-
-// NAVBAR - HAMBUERGUER MENU
-
 const body = document.body;
 const hamburguerBtn = document.querySelector('#hamburguerBtn');
 const header = document.querySelector('.header');
@@ -10,7 +7,7 @@ const main = document.querySelector('.main');
 const searchBar = document.querySelector('#searchBar');
 const searchBtn = document.querySelector('#searchBtn');
 const searchGif = document.querySelector('#searchGif');
-
+// NAVBAR - HAMBUERGUER MENU
 hamburguerBtn.addEventListener('click', function(){
     console.log('click hamburguer');
     if (hamburguerBtn.classList.contains('hamburguer')){ //hambuerger is open
@@ -36,11 +33,13 @@ hamburguerBtn.addEventListener('click', function(){
 
 searchBar.addEventListener('focus', () => {
   searchBtn.style.right =""
-  searchBtn.style.left ="30vw"
+  searchBtn.style.left ="30%"
+  sugList.style.display = "block"
 })
-/* searchBar.addEventListener('blur', ()=> {
+searchBar.addEventListener('blur', ()=> {
   searchBtn.style.left =""
-  searchBtn.style.right ="30vw"
-  }) */
+  searchBtn.style.right ="30%"
+  sugList.style.display = "none"
+  }) 
 
 

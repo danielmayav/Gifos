@@ -28,11 +28,11 @@
     }
 
     .searchbar {
-        width: 100vw;
+        width: 70vw;
         display: grid;
         place-items: center;
         position: relative;
-
+    }
         .search-btn{
             background-color: var(--color-page-background);
             height: 30px;
@@ -41,44 +41,93 @@
             background-repeat: no-repeat;
             background-position: center;
             position: absolute;
-            right: 30vw;
+            right: 30%;
             border: none;
             cursor: pointer;
             outline: none;
             
         }
 
-        input {
+        .input-cont {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             align-self: center;
-            max-width: 80%;
-            width: 45vw;
+
+            width: 30vw;
             min-width: 100px;
             height: 50px;
             border: 1px solid var(--color-text-blue);
             border-radius: 27px;
-            border-radius: 27px;
             background-color: var(--page-background);
-            background-position: 95% 50%;
-            background-repeat: no-repeat;
             padding: 0 40px;
             font-size: 16px;
             font-family: 'Roboto', sans-serif;
-            outline: none;
             text-indent: 20px;
-            &:focus {
-                background-image: none;
-                 
-            }
-            
-            
+
         }
 
-
-    }
+        .input-cont-act {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: left;
+            justify-items: left;
+            width: 30vw;
+            min-width: 100px;
+            height: 210px;
+            border: 1px solid var(--color-text-blue);
+            border-radius: 27px;
+            background-color: var(--page-background);
+            padding: 5px 20px;
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            text-indent: 20px;
+        }
+        #searchBar {
+            margin-left: 8%;
+            width: 80%;
+            border: none;
+            outline: none;
+            height: 2rem;
+            margin-top: 12px;
+        }
+        .sug-list {
+            display: inline-block;
+            vertical-align: middle;
+            list-style-type: none;
+            margin-left: 8%;
+            width: 80%;
+            margin: 0;
+            padding: 0;
+            .suggestion {
+                height: 30px;
+                width: 100%;
+                border: none;
+                vertical-align: middle;
+                margin: 2px;
+                padding: 2px;
+                
+            }
+               .sugg-text {
+                   display: inline-block;
+                    vertical-align:top;
+                    cursor: pointer;
+                    font-family: 'Roboto', sans-serif;
+                    color: $grey;
+                    font-size: 16px;
+                    padding-top: 8px;
+                    
+                }
+                .sugerencia-lupa-gris {
+                    display: inline-block;
+                    vertical-align: baseline;
+                }
+                
+        }
+        
     
     
-
-
     img {
         padding: 10px;
     }
@@ -110,7 +159,8 @@
         padding: 5px;
     }
 
-    .button {
+    .btn-vermas {
+        display: none;
         background-color: var(--color-page-background);
         padding: 15px;
         color: var(--color-text-blue);
@@ -127,12 +177,25 @@
         display: flex;
         flex-wrap: wrap;
         margin-top: 30px;
+        width: 100vw;
+        justify-content: center;
         h2 {
-            text-transform: uppercase;
+            text-transform: capitalize;
+            text-align: center;
+            white-space: pre-line;
+            align-self: center;
+            width: 100%;
         }
+    
     }
     
 }
 
+.search-no-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 

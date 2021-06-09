@@ -69,4 +69,16 @@ img {
     display: none;
 }
 
-
+.btn-general {
+    color: var(--color-text-blue);
+    background-color: var(--page-background);
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    border: 1px solid var(--color-text-blue);
+    border-radius: 1.5625rem;
+    line-height: 1rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}

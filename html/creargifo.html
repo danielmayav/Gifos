@@ -29,36 +29,76 @@
     </header>
 
 <main>
-
-    <div class="camera-vid-cont flex flex-ai-c">
-        <div class="flex camera-container">
-            <img class="cintas cinta1" src="/assets/element_cinta1.svg" alt="">
-            <img class="cintas cinta2" src="/assets/element_cinta2.svg" alt="">
-            <img class="camara" src="/assets/element-camara.svg" alt="">
-            <img class="luzcamara" src="/assets/element-luz-camara.svg" alt="">
+<section clas="main-newgif">
+    <div class="cont-ng">
+        <div class="camera-container">
+            <img src="/assets/camara.svg" alt="camara" id="camara-ilustracion" class="camara">
+            <img src="/assets/element-luz-camara.svg" alt="luzcamara" id="luzcamara">
         </div>
+<div class="camera-vid-cont">
+    <div class="newgif-cont">
+        <!-- <div class="esquina1"></div>
+        <div class="esquina2"></div>
+        <div class="esquina3"></div>
+        <div class="esquina4"></div> -->
+        
         <div class="video-cont">
-            <video src="" width="640px" height="360px" id="video"></video>
+            <!-- TODO: CAMBIAR NOMBRES parte insertada -->
+            <h2 id="grabar-title">Aquí podrás <br>crear tus propios <span
+                id="gifos-crear">GIFOS</span></h2>
+            <p id="grabar-text">¡Crea tu GIFO en sólo 3 pasos!<br>
+            (sólo necesitas una cámara para grabar un video)</p>
+
+            <div class="overlay-video" id="overlay-vid">
+
+                <div id="actions-overlay-vid">
+                </div>
+
+                <div id="overlay-vid-text">
+                <img src="/assets/loader.svg" alt="loading gifo" id="overlay-vid-ic">
+                <p id="overlay-vid-p">Estamos subiendo tu GIFO</p>
+                </div>
+            <!-- INSERTADO HASTA ACA -->
+
+            </div>
+        <video src="" id="video"></video>
+        <img src="" alt="" id="recorded-gif"> <!--TODO: CAMBIAR NOMBRES img-->
         </div>
     </div>
 
-<div class="btns-container flex">
-<div class="vid-buttons flex flex-ai-c">
-    <div class="progres">1</div>
-    <div class="progres">2</div>
-    <div class="progres">3</div>
-    
-    
+    <div class="progres-cont">
+        <div class="progres-num-cont flex">
+            <p class="new-gif-progres">1</p>
+            <p class="new-gif-progres">2</p>
+            <p class="new-gif-progres">3</p>
+        </div>
+        <div class="contador-contenedor"> <!-- TODO: CAMBIAR NOMBRES ESTE DIV FUE INSERTADO -->
+            <p id="time-counter">0:00:00</p>
+            <button id="repeat-rec">repetir captura</button>
+        </div>
     </div>
-    <img src="/assets/pelicula.svg" alt="">
-    <span></span>
-    <button class="video-btn" id="start">Comenzar</button>
 </div>
 
+    <div class="div-pelicula">
+        <img src="/assets/pelicula.svg" alt="">
+    </div>
+</div>
+<div class="divi-newgif"></div>
+
+<div class="botones-creargifo-contenedor"> <!-- TODO: CAMBIAR / AGREGAR ID's | CSS OK-->
+
+    <button id="btn-newgif-start" class="btn-general">Comenzar</button>
+    <button id="btn-newgif-rec" class="btn-general">Grabar</button>
+    <button id="btn-newgif-stop" class="btn-general">Finalizar</button>
+    <button id="btn-newgif-upload" class="btn-general">Subir GIFO</button>
+
+</div>
+
+</section>
     </main>
 
    
-    <footer class="footer"> 
+<footer class="footer"> 
         
         <div>
             <p>Compartir</p>
@@ -76,7 +116,8 @@
        
 
     </footer>
-
+    
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
     <script src="/app/js/darkmode.js"></script>
     <script src="/app/js/newgif.js"></script>
 </body>

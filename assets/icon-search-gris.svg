@@ -13,7 +13,7 @@
                     <use xlink:href="#path-1"></use>
                 </mask>
                 <use id="Combined-Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
-                <g id="Primary-color-Copy-2" mask="url(#mask-2)" fill="#FFFFFF">
+                <g id="Primary-color-Copy-2" mask="url(#mask-2)" fill="#9CAFC3">
                     <g transform="translate(-2.000000, -2.000000)" id="Rectangle">
                         <rect x="0" y="0" width="24" height="24"></rect>
                     </g>

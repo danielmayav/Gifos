@@ -13,6 +13,7 @@
 
    .trend-head {
       margin-bottom: 40px;
+      
    }
 
     
@@ -62,27 +63,39 @@
             background-repeat: no-repeat;
          }
    };
-    
-
-   .trend-container {
-      overflow-x: auto;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 255px;
-      align-content: center;
-      margin-top: 20px;
-      scrollbar-width: none;
-      
-      &::-webkit-scrollbar {
-            display: none;
-      }
-      
-      
-
-            
-         };
    
 };
 
+.trend-container {
+   overflow-x: hidden;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: 255px;
+   align-content: center;
+   margin-top: 20px;
+   scrollbar-width: none;
+   
+   &::-webkit-scrollbar {
+         display: none;
+   }
+   &:first-child {
+      margin-left: 50px;
+   }
+}
+
+// ················· min-width 1024px
+@include breakpoint-up (large){
+   .trending-slider-box {
+       overflow-x: hidden;
+       width: 795px;
+   }
+}
+
+// ················ min-width 1440px
+@include breakpoint-up (xlarge){
+   .trending-slider-box {
+      width: 1133px;
+   }
+}
