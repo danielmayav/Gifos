@@ -34,12 +34,12 @@ hamburguerBtn.addEventListener('click', function(){
 searchBar.addEventListener('focus', () => {
   searchBtn.style.right =""
   searchBtn.style.left ="30%"
-  sugList.style.display = "block"
+
 })
 searchBar.addEventListener('blur', ()=> {
   searchBtn.style.left =""
   searchBtn.style.right ="30%"
-  sugList.style.display = "none"
+
   }) 
 
 

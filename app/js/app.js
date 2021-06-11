@@ -22,6 +22,7 @@ searchBar.addEventListener('input', () => {
     } else {
         inputContainer.classList.remove('input-cont-act')
         inputContainer.classList.add('input-cont')
+        sugList.innerHTML=''
     }
 })
 
@@ -56,6 +57,11 @@ function renderSugg (data){
     `
 }
 
+sugList.addEventListener('click', (li) => {
+    searchBar.value = li.target.textContent;
+    search(searchBar.value)
+})
+
 
 
 
@@ -68,18 +74,18 @@ searchGif.addEventListener('submit', function(e){
    searchBar.value = ''
 })
 
-async function search (q){
+function search (q){
     const searchPath = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${q}&limit=12`;
     console.log(searchPath)
     searchResult.innerHTML = ''
     fetch(searchPath)
         .then(async function(res){
-            return await res.json()
+           return res.json()
         })
         .then(async function(json){   
             let resultHTML = ''
             let  searchTitle = `<h2>${q}</h2>`
-            await json.data.forEach(function(obj){
+            json.data.forEach(function(obj){
                 let title = obj.title
                 let user = obj.username
                 let urlImg = obj.images.downsized.url

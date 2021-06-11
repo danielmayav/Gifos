@@ -304,7 +304,7 @@ img {
 }
 
 .nav-links li a {
-  color: #fff;
+  color: #50E3C2;
   text-align: center;
 }
 
@@ -361,6 +361,7 @@ img {
   background-position: center;
   position: absolute;
   right: 30%;
+  top: 10px;
   border: none;
   cursor: pointer;
   outline: none;
@@ -408,7 +409,7 @@ img {
   justify-items: left;
   width: 30vw;
   min-width: 100px;
-  height: 210px;
+  height: 14.375rem;
   border: 1px solid var(--color-text-blue);
   border-radius: 27px;
   background-color: var(--page-background);
@@ -418,13 +419,19 @@ img {
   text-indent: 20px;
 }
 
-.main #searchBar {
+.main .input-text {
   margin-left: 8%;
   width: 80%;
   border: none;
   outline: none;
   height: 2rem;
+  background-color: var(--color-page-background);
   margin-top: 12px;
+  color: var(--color-text-black);
+}
+
+.main .input-text:focus {
+  border-bottom: 1px solid #9CAFC3;
 }
 
 .main .sug-list {
@@ -435,6 +442,10 @@ img {
   width: 80%;
   margin: 0;
   padding: 0;
+}
+
+.main .sug-list:last-child {
+  padding-bottom: 10px;
 }
 
 .main .sug-list .suggestion {
@@ -459,10 +470,6 @@ img {
 .main .sug-list .sugerencia-lupa-gris {
   display: inline-block;
   vertical-align: baseline;
-}
-
-.main img {
-  padding: 10px;
 }
 
 .main h3 {
@@ -742,10 +749,10 @@ footer .footer-icons-in:hover {
 }
 
 .gif-cont {
-  width: 243px;
-  height: 187px;
-  margin: 0 20px;
-  scroll-snap-align: center;
+  width: 280px;
+  height: 170px;
+  margin: 10px;
+  position: relative;
 }
 
 .gif-cont:hover .card-details {
@@ -753,23 +760,34 @@ footer .footer-icons-in:hover {
 }
 
 .gif-cont .card-details {
+  margin: 0;
+  padding: 0;
   display: none;
   position: absolute;
   z-index: 0;
   background-color: rgba(87, 46, 229, 0.6);
-  width: 243px;
-  height: 187px;
+  width: 100%;
+  height: 100%;
 }
 
 .gif-cont .card-details .icons-details {
-  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   right: 10px;
 }
 
+.gif-cont .card-details .icons-details:last-child {
+  margin-right: 15px;
+}
+
 .gif-cont .card-details__btn {
-  margin: 15px 5px 0 5px;
-  width: 2rem;
-  height: 2rem;
+  margin: 5px;
+  width: 1.8rem;
+  height: 1.8rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -781,36 +799,42 @@ footer .footer-icons-in:hover {
 .gif-cont .card-details .__fav {
   background-image: var(--btn-fav);
   background-repeat: no-repeat;
+  background-position: center;
   opacity: 0.7;
 }
 
 .gif-cont .card-details .__fav:hover {
   background-image: var(--btn-fav-ho);
   background-repeat: no-repeat;
+  background-position: center;
   opacity: 1;
 }
 
 .gif-cont .card-details .__dwld {
   background-image: var(--btn-dwld);
   background-repeat: no-repeat;
+  background-position: center;
   opacity: 0.7;
 }
 
 .gif-cont .card-details .__dwld:hover {
   background-image: var(--btn-dwld-ho);
   background-repeat: no-repeat;
+  background-position: center;
   opacity: 1;
 }
 
 .gif-cont .card-details .__expand {
   background-image: var(--btn-max);
   background-repeat: no-repeat;
+  background-position: center;
   opacity: 0.7;
 }
 
 .gif-cont .card-details .__expand:hover {
   background-image: var(--btn-max-ho);
   background-repeat: no-repeat;
+  background-position: center;
   opacity: 1;
 }
 
@@ -827,7 +851,7 @@ footer .footer-icons-in:hover {
   padding: 5px;
   margin: 2px;
   color: #FFFFFF;
-  font-size: 15px;
+  font-size: 0.8rem;
   text-align: left;
 }
 
@@ -835,7 +859,7 @@ footer .footer-icons-in:hover {
   padding: 5px;
   margin: 2px;
   font-family: 'Roboto', sans-serif;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .img-gif {
