@@ -29,6 +29,7 @@
 
     .searchbar {
         width: 70vw;
+        min-width: 60vw;
         display: grid;
         place-items: center;
         position: relative;
@@ -37,11 +38,12 @@
             background-color: var(--color-page-background);
             height: 30px;
             width: 30px;
+            justify-self: center;
+            align-self: flex-end;
             background-image: var(--search-icon);
             background-repeat: no-repeat;
             background-position: center;
             position: absolute;
-            right: 30%; top: 10px;
             border: none;
             cursor: pointer;
             outline: none;
@@ -54,17 +56,17 @@
             flex-direction: column;
             align-items: center;
             align-self: center;
-
-            width: 30vw;
-            min-width: 100px;
+            justify-content: center;
+            width: 50%;
+            min-width: 250px;
             height: 50px;
             border: 1px solid var(--color-text-blue);
             border-radius: 27px;
             background-color: var(--page-background);
-            padding: 0 40px;
+            padding: 0 20px;
             font-size: 16px;
             font-family: 'Roboto', sans-serif;
-            text-indent: 20px;
+            text-indent: 10px;
 
         }
 
@@ -74,8 +76,8 @@
             align-items: center;
             justify-content: left;
             justify-items: left;
-            width: 30vw;
-            min-width: 100px;
+            width: 50%;
+            min-width: 250px;
             height: 14.375rem;
             border: 1px solid var(--color-text-blue);
             border-radius: 27px;
@@ -83,26 +85,30 @@
             padding: 5px 20px;
             font-size: 16px;
             font-family: 'Roboto', sans-serif;
-            text-indent: 20px;
+            text-indent: 10px;
         }
         .input-text {
-            margin-left: 8%;
-            width: 80%;
+            margin-left: 3%;
+            width: 70%;
             border: none;
             outline: none;
             height: 2rem;
             background-color: var(--color-page-background);
-            margin-top: 12px;
+            margin-top: 5px;
             color: var(--color-text-black);
             &:focus {
                 border-bottom: 1px solid $grey;
+                .search-btn {
+                    align-self: flex-start;
+                }
             }
         }
         .sug-list {
-            display: inline-block;
+            display: none;
             vertical-align: middle;
             list-style-type: none;
-            margin-left: 8%;
+            min-width: 50px;
+            margin-left: 3%;
             width: 80%;
             margin: 0;
             padding: 0;
@@ -113,9 +119,17 @@
                 height: 30px;
                 width: 100%;
                 border: none;
-                vertical-align: middle;
+                vertical-align: top;
                 margin: 2px;
                 padding: 2px;
+                img {
+                    width: 15px;
+                    height: 15px;
+                    vertical-align: text-bottom;
+                    display: inline-block;
+                    vertical-align: baseline;
+                    margin-top: 7px;
+                }
                 
             }
                .sugg-text {
@@ -125,12 +139,7 @@
                     font-family: 'Roboto', sans-serif;
                     color: $grey;
                     font-size: 16px;
-                    padding-top: 8px;
-                    
-                }
-                .sugerencia-lupa-gris {
-                    display: inline-block;
-                    vertical-align: baseline;
+   
                 }
                 
         }
@@ -182,7 +191,18 @@
     .results {
         display: flex;
         flex-wrap: wrap;
-        margin-top: 30px;
+        margin-top: 20px;
+        padding: 0 150px;
+        @include breakpoint-down(small) {
+            padding: 0 20px;
+        }
+        @include breakpoint-up(medium) {
+            padding: 0 100px;
+        }
+       /*  @include breakpoint-down(large) {
+            padding: 0 150px;
+        }
+ */
         width: 100vw;
         justify-content: center;
         h2 {

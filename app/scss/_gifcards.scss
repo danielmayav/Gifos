@@ -1,6 +1,17 @@
 .gif-cont {
-  width: 280px;
-  height: 170px;
+  
+  @include breakpoint-down (small){
+    width: 280px;
+    height: 200px;
+  }
+  @include breakpoint-up (medium){
+    width: 360px;
+    height: 280px;
+  }
+  @include breakpoint-up(xlarge){
+    width: 320px;
+    height: 240px;
+  } 
   margin: 10px;
   position: relative;
   &:hover .card-details {
@@ -21,13 +32,14 @@
         display: flex;
         justify-content: flex-end;
         right: 10px;
+        margin: 5px;
         &:last-child {
           margin-right: 15px;
         }
       }
   
       &__btn {
-        margin: 5px;
+        margin: 3px;
         width: 1.8rem;
         height: 1.8rem;
         outline: none;

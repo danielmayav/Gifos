@@ -45,6 +45,9 @@
   --btn-slider-rgh-ho:    url('/assets/Button-Slider-right-hover.svg');
 }
 
+/* @media (min-width: 64em) {
+    // styles
+} */
 @-webkit-keyframes fade-in {
   from {
     opacity: 0;
@@ -53,7 +56,6 @@
     opacity: 0.9;
   }
 }
-
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -67,6 +69,7 @@ html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0;
 }
 
 *, *::before, *::after {
@@ -346,6 +349,7 @@ img {
 
 .main .searchbar {
   width: 70vw;
+  min-width: 60vw;
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -356,12 +360,14 @@ img {
   background-color: var(--color-page-background);
   height: 30px;
   width: 30px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   background-image: var(--search-icon);
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  right: 30%;
-  top: 10px;
   border: none;
   cursor: pointer;
   outline: none;
@@ -380,16 +386,19 @@ img {
           align-items: center;
   -ms-flex-item-align: center;
       align-self: center;
-  width: 30vw;
-  min-width: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  min-width: 250px;
   height: 50px;
   border: 1px solid var(--color-text-blue);
   border-radius: 27px;
   background-color: var(--page-background);
-  padding: 0 40px;
+  padding: 0 20px;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
-  text-indent: 20px;
+  text-indent: 10px;
 }
 
 .main .input-cont-act {
@@ -407,8 +416,8 @@ img {
       -ms-flex-pack: left;
           justify-content: left;
   justify-items: left;
-  width: 30vw;
-  min-width: 100px;
+  width: 50%;
+  min-width: 250px;
   height: 14.375rem;
   border: 1px solid var(--color-text-blue);
   border-radius: 27px;
@@ -416,17 +425,17 @@ img {
   padding: 5px 20px;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
-  text-indent: 20px;
+  text-indent: 10px;
 }
 
 .main .input-text {
-  margin-left: 8%;
-  width: 80%;
+  margin-left: 3%;
+  width: 70%;
   border: none;
   outline: none;
   height: 2rem;
   background-color: var(--color-page-background);
-  margin-top: 12px;
+  margin-top: 5px;
   color: var(--color-text-black);
 }
 
@@ -434,11 +443,17 @@ img {
   border-bottom: 1px solid #9CAFC3;
 }
 
+.main .input-text:focus .search-btn {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
 .main .sug-list {
-  display: inline-block;
+  display: none;
   vertical-align: middle;
   list-style-type: none;
-  margin-left: 8%;
+  min-width: 50px;
+  margin-left: 3%;
   width: 80%;
   margin: 0;
   padding: 0;
@@ -452,9 +467,18 @@ img {
   height: 30px;
   width: 100%;
   border: none;
-  vertical-align: middle;
+  vertical-align: top;
   margin: 2px;
   padding: 2px;
+}
+
+.main .sug-list .suggestion img {
+  width: 15px;
+  height: 15px;
+  vertical-align: text-bottom;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-top: 7px;
 }
 
 .main .sug-list .sugg-text {
@@ -464,12 +488,6 @@ img {
   font-family: 'Roboto', sans-serif;
   color: #9CAFC3;
   font-size: 16px;
-  padding-top: 8px;
-}
-
-.main .sug-list .sugerencia-lupa-gris {
-  display: inline-block;
-  vertical-align: baseline;
 }
 
 .main h3 {
@@ -515,11 +533,28 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 30px;
+  margin-top: 20px;
+  padding: 0 150px;
+  /*  @include breakpoint-down(large) {
+            padding: 0 150px;
+        }
+ */
   width: 100vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (max-width: 39.9375rem) {
+  .main .results {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 40rem) {
+  .main .results {
+    padding: 0 100px;
+  }
 }
 
 .main .results h2 {
@@ -749,10 +784,29 @@ footer .footer-icons-in:hover {
 }
 
 .gif-cont {
-  width: 280px;
-  height: 170px;
   margin: 10px;
   position: relative;
+}
+
+@media (max-width: 39.9375rem) {
+  .gif-cont {
+    width: 280px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 40rem) {
+  .gif-cont {
+    width: 360px;
+    height: 280px;
+  }
+}
+
+@media (min-width: 87.5rem) {
+  .gif-cont {
+    width: 320px;
+    height: 240px;
+  }
 }
 
 .gif-cont:hover .card-details {
@@ -778,6 +832,7 @@ footer .footer-icons-in:hover {
       -ms-flex-pack: end;
           justify-content: flex-end;
   right: 10px;
+  margin: 5px;
 }
 
 .gif-cont .card-details .icons-details:last-child {
@@ -785,7 +840,7 @@ footer .footer-icons-in:hover {
 }
 
 .gif-cont .card-details__btn {
-  margin: 5px;
+  margin: 3px;
   width: 1.8rem;
   height: 1.8rem;
   outline: none;

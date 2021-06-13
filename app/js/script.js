@@ -32,14 +32,10 @@ hamburguerBtn.addEventListener('click', function(){
 // =====  SEARCH BAR BUTTON STYLE
 
 searchBar.addEventListener('focus', () => {
-  searchBtn.style.right =""
-  searchBtn.style.left ="30%"
-
+  searchBtn.style.alignSelf ="flex-start"
 })
 searchBar.addEventListener('blur', ()=> {
-  searchBtn.style.left =""
-  searchBtn.style.right ="30%"
-
+  searchBtn.style.alignSelf ="flex-end"
   }) 
 
 

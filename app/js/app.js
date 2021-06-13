@@ -3,6 +3,7 @@ const searchResult = document.getElementById('results');
 const btnVermas = document.getElementById('btn-vermas');
 const sugList = document.getElementById('sug-list');
 const inputContainer = document.getElementById ('inputContainer');
+let offsetSearch = 0;
 
 // ========    SEARCH SUGESTIONS
 
@@ -11,6 +12,7 @@ searchBar.addEventListener('input', () => {
     if (searchInput.length >=1) {
         inputContainer.classList.remove('input-cont')
         inputContainer.classList.add('input-cont-act')
+        sugList.style.display = "inline-block"
         fetch (`https://api.giphy.com/v1/tags/related/${searchInput}?api_key=${apiKey}&limit=5`)
         .then(response => response.json())
         .then(data => {
@@ -22,7 +24,8 @@ searchBar.addEventListener('input', () => {
     } else {
         inputContainer.classList.remove('input-cont-act')
         inputContainer.classList.add('input-cont')
-        sugList.innerHTML=''
+        sugList.innerHTML = ''
+        sugList.style.display ="none"
     }
 })
 
@@ -63,19 +66,18 @@ sugList.addEventListener('click', (li) => {
 })
 
 
-
-
 // ======= SEARCH
 
 searchGif.addEventListener('submit', function(e){
    e.preventDefault()
    const q = searchBar.value
    search(q)
-   searchBar.value = ''
+   //searchBar.value = ''
+   
 })
-
+console.log(searchBar.value)
 function search (q){
-    const searchPath = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${q}&limit=12`;
+    const searchPath = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${q}&limit=12&offset=${offsetSearch}`;
     console.log(searchPath)
     searchResult.innerHTML = ''
     fetch(searchPath)
@@ -89,13 +91,16 @@ function search (q){
                 let title = obj.title
                 let user = obj.username
                 let urlImg = obj.images.downsized.url
+                if (urlImg == null) {
+                    urlImg = obj.images.original.url
+                }
                 let id = obj.id
-                let slug = obj.slug
+                let slug = obj.slug 
                 resultHTML += `
                 <div class="gif-cont" onclick="maxGifMobileTrending('${urlImg}', '${id}', '${slug}', '${user}', '${title}')")>
                 <div class="card-details">
                     <div class="icons-details">
-                        <button class="card-details__btn __fav" onclick="agregarFavoritoTrending('${id}')" id="icon-fav-trending-${id}></button>
+                        <button class="card-details__btn __fav" onclick="agregarFavoritoTrending('${id}')" id="icon-fav-trending-${id}"></button>
                         <button class="card-details__btn __dwld" onclick="descargarGifTrending('${urlImg}', '${slug}')"></button>
                         <button class="card-details__btn __expand" onclick="maxGifDesktopTrending('${urlImg}', '${id}', '${slug}', '${user}', '${title}')"></button>
                     </div>
@@ -108,12 +113,7 @@ function search (q){
                 </div>
                 `
                 btnVermas.style.display = 'block'
-               
-                /* resultHTML = document.createElement("img")
-                resultHTML.src = urlPath;
-                resultHTML.classList.add('gif')
-                searchResult.appendChild(resultHTML) */
-                
+   
             })
             searchResult.innerHTML = searchTitle + resultHTML;
             if (searchResult.innerHTML === `<h2>${q}</h2>`){
@@ -133,4 +133,56 @@ function search (q){
         })
 }
 
+btnVermas.addEventListener('click', verMas)
 
+function verMas () {
+    if(offsetSearch>=24){
+        btnVermas.style.display = "none"
+    }
+    offsetSearch += 12;
+    searchVerMas()
+}
+
+function searchVerMas (){
+    let q = searchBar.value
+    const searchPath = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${q}&limit=12&offset=${offsetSearch}`;
+    console.log(searchPath)
+    fetch(searchPath)
+        .then(function(res){
+           return res.json()
+        })
+        .then(function(json){   
+            let resultHTML = ''
+            json.data.forEach(function(obj){
+                let title = obj.title
+                let user = obj.username
+                let urlImg = obj.images.downsized.url
+                if (urlImg == null) {
+                    urlImg = obj.images.original.url
+                }
+                let id = obj.id
+                let slug = obj.slug 
+                resultHTML += `
+                <div class="gif-cont" onclick="maxGifMobileTrending('${urlImg}', '${id}', '${slug}', '${user}', '${title}')")>
+                <div class="card-details">
+                    <div class="icons-details">
+                        <button class="card-details__btn __fav" onclick="agregarFavoritoTrending('${id}')" id="icon-fav-trending-${id}"></button>
+                        <button class="card-details__btn __dwld" onclick="descargarGifTrending('${urlImg}', '${slug}')"></button>
+                        <button class="card-details__btn __expand" onclick="maxGifDesktopTrending('${urlImg}', '${id}', '${slug}', '${user}', '${title}')"></button>
+                    </div>
+                    <div class="card-details__text">
+                        <p>${user}</p>
+                        <h5>${title}</h5>
+                    </div>
+                </div>
+                <img src="${urlImg}" alt="${title}" class="img-gif">
+                </div>
+                `
+                btnVermas.style.display = 'block'
+   
+            })
+            searchResult.appendChild('resultHTML')
+        }) .catch (function(err){ // FIXME: <-----------------
+            console.log(err.message)
+    })
+}
