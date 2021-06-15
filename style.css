@@ -557,7 +557,7 @@ img {
   }
 }
 
-.main .results h2 {
+.main #result-title {
   text-transform: capitalize;
   text-align: center;
   white-space: pre-line;

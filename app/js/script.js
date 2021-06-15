@@ -36,6 +36,7 @@ searchBar.addEventListener('focus', () => {
 })
 searchBar.addEventListener('blur', ()=> {
   searchBtn.style.alignSelf ="flex-end"
+  
   }) 
 
 

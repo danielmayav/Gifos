@@ -205,7 +205,8 @@
  */
         width: 100vw;
         justify-content: center;
-        h2 {
+    }
+        #result-title {
             text-transform: capitalize;
             text-align: center;
             white-space: pre-line;
@@ -213,7 +214,7 @@
             width: 100%;
         }
     
-    }
+    
     
 }
 
