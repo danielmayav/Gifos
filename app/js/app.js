@@ -75,11 +75,11 @@ searchGif.addEventListener('submit', function(e){
    search(q)
 })
 console.log(searchBar.value)
-function search(q) {
+async function search(q) {
     const searchPath = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${q}&limit=12&offset=${offsetSearch}`;
     console.log(searchPath)
     searchResult.innerHTML = ''
-    fetch(searchPath)
+    await fetch(searchPath)
         .then(res => res.json())
         .then(json => {   
             searchTitle.innerHTML = `${q}`
@@ -113,12 +113,12 @@ function renderSearch(obj) {
     let id = obj.id
     let slug = obj.slug 
     searchResult.innerHTML += `
-    <div class="gif-cont" onclick="maxGifMobileTrending('${urlImg}', '${id}', '${slug}', '${user}', '${title}')")>
+    <div class="gif-cont" onclick="maxGifMobile('${urlImg}', '${id}', '${slug}', '${user}', '${title}')")>
     <div class="card-details">
         <div class="icons-details">
-            <button class="card-details__btn __fav" onclick="agregarFavoritoTrending('${id}')" id="icon-fav-trending-${id}"></button>
-            <button class="card-details__btn __dwld" onclick="descargarGifTrending('${urlImg}', '${slug}')"></button>
-            <button class="card-details__btn __expand" onclick="maxGifDesktopTrending('${urlImg}', '${id}', '${slug}', '${user}', '${title}')"></button>
+            <button class="card-details__btn __fav" onclick="agregarFavorito('${id}', '${urlImg}', '${title}', '${user}' )" id="icon-fav-${id}"></button>
+            <button class="card-details__btn __dwld" onclick="descargarGif('${urlImg}', '${slug}')"></button>
+            <button class="card-details__btn __expand" onclick="maxGifDesktop('${urlImg}', '${id}', '${slug}', '${user}', '${title}')"></button>
         </div>
         <div class="card-details__text">
             <p>${user}</p>
@@ -140,11 +140,11 @@ function verMas () {
 }
 
 
-function searchVerMas (){
+async function searchVerMas (){
     let q = searchBar.value
     const searchPath = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${q}&limit=12&offset=${offsetSearch}`;
     console.log(searchPath)
-    fetch(searchPath)
+    await fetch(searchPath)
         .then(res => res.json())
         .then(json => {   
             searchTitle.innerHTML = `${q}`

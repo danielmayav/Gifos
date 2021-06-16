@@ -3,6 +3,9 @@
    font-size: 1em;
    font-weight: 500;
    letter-spacing: 1px;
+   &:hover {
+      color: $lightgrey;
+   }
 }
 
 .trending {

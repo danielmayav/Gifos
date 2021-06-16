@@ -590,6 +590,10 @@ img {
   letter-spacing: 1px;
 }
 
+.tags-link:hover {
+  color: #6B7989;
+}
+
 .trending {
   background-color: var(--bg-sec-trending);
   padding: 10vh 0 8vh 0;
@@ -780,19 +784,26 @@ footer .footer-icons-in:hover {
 }
 
 .gif-cont {
+  /* @include breakpoint-up(xlarge){
+    width: 380px;
+    min-width: 380px;
+    height: 260px;
+  }  */
   margin: 10px;
   position: relative;
 }
 
 @media (max-width: 39.9375rem) {
   .gif-cont {
-    min-width: 280px;
-    height: 200px;
+    width: 320px;
+    min-width: 320px;
+    height: 240px;
   }
 }
 
 @media (min-width: 40rem) {
   .gif-cont {
+    width: 360px;
     min-width: 360px;
     height: 280px;
   }
@@ -800,15 +811,9 @@ footer .footer-icons-in:hover {
 
 @media (min-width: 64rem) {
   .gif-cont {
-    min-width: 320px;
-    height: 240px;
-  }
-}
-
-@media (min-width: 87.5rem) {
-  .gif-cont {
-    min-width: 340px;
-    height: 260px;
+    width: 380px;
+    min-width: 380px;
+    height: 320px;
   }
 }
 

@@ -7,6 +7,7 @@ const main = document.querySelector('.main');
 const searchBar = document.querySelector('#searchBar');
 const searchBtn = document.querySelector('#searchBtn');
 const searchGif = document.querySelector('#searchGif');
+
 // NAVBAR - HAMBUERGUER MENU
 hamburguerBtn.addEventListener('click', function(){
     console.log('click hamburguer');

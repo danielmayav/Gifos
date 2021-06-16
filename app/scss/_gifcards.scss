@@ -1,21 +1,25 @@
 .gif-cont {
   
   @include breakpoint-down (small){
-    min-width: 280px;
-    height: 200px;
+    width: 320px;
+    min-width: 320px;
+    height: 240px;
   }
   @include breakpoint-up (medium){
+    width: 360px;
     min-width: 360px;
     height: 280px;
   }
   @include breakpoint-up(large){
-    min-width: 320px;
-    height: 240px;
+    width: 380px;
+    min-width: 380px;
+    height: 320px;
   } 
-  @include breakpoint-up(xlarge){
-    min-width: 340px;
+  /* @include breakpoint-up(xlarge){
+    width: 380px;
+    min-width: 380px;
     height: 260px;
-  } 
+  }  */
   margin: 10px;
   position: relative;
   &:hover .card-details {
