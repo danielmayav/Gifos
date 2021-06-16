@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="logo" sizes="32x32"  href="/assets/logo-mobile.svg"> <!-- FIXME: Logo png -->
+    <link rel="logo" sizes="32x32"  href="./assets/logo-mobile.svg"> <!-- FIXME: Logo png -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./style.css">
 
     <title>Gifos</title>
 </head>
@@ -15,12 +15,12 @@
     <header class="header">
         <div class="overlay"></div>
         <nav class="nav flex flex-jc-sb flex-ai-c">
-            <a target="_self" href="/index.html" class="logo"> <img src="/assets/logo.svg" alt="logo"></a>
+            <a target="_self" href="/index.html" class="logo"> <img src="./assets/logo.svg" alt="logo"></a>
             <ul class="flex flex-ai-c hide-for-mobile" id="nav-links">
                 <li><a target="_self" href="#" id="modnoct-btn" onclick="diurnoNocturno()" >MODO NOCTURNO</a></li>
-                <li><a target="_blank" href="/html/favoritos.html">FAVORITOS</a></li>
-                <li><a target="_blank" href="/html/misgifos.html">MIS GIFOS</a></li>
-                <li><a target="_self" href="/html/creargifo.html" class="hide-for-mobile">
+                <li><a target="_blank" href="./html/favoritos.html">FAVORITOS</a></li>
+                <li><a target="_blank" href="./html/misgifos.html">MIS GIFOS</a></li>
+                <li><a target="_self" href="./html/creargifo.html" class="hide-for-mobile">
                     <button class="new-gif-logo"></button>
                 </li></a>
             </ul>
@@ -32,7 +32,7 @@
 <!--===========           MAIN TITLE/ILUSTRATION      ===============>    -->
     <main class="main flex flex-jc-c flex-ai-c">
         <h1 class="">Inspírate, busca, guarda, y crea los mejores <b>GIFOS</b></h1> 
-        <img src="/assets/ilustra_header.svg" alt="ilustración" class="ilustration">
+        <img src="./assets/ilustra_header.svg" alt="ilustración" class="ilustration">
 
 <!--===========           SEARCHBAR      ===============>    -->
         <form id="searchGif" class="searchbar">
@@ -51,24 +51,23 @@
 <!-- ============           END         ===============-->
     <section class="main flex flex-jc-c flex-ai-c">
         <h3>Trending:</h3>
-        <p>Reactions, Entretainment, Sports, Stickers, Artist</p>
+        <p id="topics-trend"></p>
       
     </section>
     </main>
 <!--===========            TRENDING       ==========-->
-    <section class="trending flex">
-       
-        <div class="trend-head">
-            <h2>Trending GIFOS</h2>
-            <p>Mira los últimos GIFOS de nuestra comunidad.</p>  
-        </div>
+    <section class="trending">
+        <h2 class="trending__title">Trending GIFOS</h2>
+        <p class="trending__text">Mira los últimos GIFOS de nuestra comunidad.</p>  
        <div class="trend-slider-cont">    
+           <div class="prev-gif hide-for-mobile"id="prev-gif"></div>            
+           <div class="trending-slider-box">
+               <div class="trend-container" id="trending-slider">
+                   <!-- CONTAINER TO RENDER TRENDS -->
+               </div>
+            </div>   
             <div class="next-gif hide-for-mobile" id="next-gif"></div>
-            <div class="trending-slider-box">
-                <div class="trend-container" id="trending-slider"><!-- CONTAINER TO RENDER TRENDS -->
-            </div>
-            <div class="prev-gif hide-for-mobile"id="prev-gif"></div>            
-        </div>   
+       </div>
     </section>
 <!-- ============           END         ===============-->
 <!-- ============           FOOTER      ===============-->
@@ -92,10 +91,10 @@
     </footer>
 <!-- ============       END          ===========-->
 <!-- ============       SCRIPTS         ===========-->
-<script src="/app/js/script.js"></script>
-<script src="/app/js/app.js"></script>
-<script src="/app/js/trending.js"></script>
-<script src="/app/js/darkmode.js"></script>
+<script src="./app/js/script.js"></script>
+<script src="./app/js/app.js"></script>
+<script src="./app/js/trending.js"></script>
+<script src="./app/js/darkmode.js"></script>
 <!-- ============       END          ===========-->
 </body>
 </html>

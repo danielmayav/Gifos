@@ -1,47 +1,40 @@
+.tags-link {
+   cursor: pointer;
+   font-size: 1em;
+   font-weight: 500;
+   letter-spacing: 1px;
+}
+
 .trending {
-    background-color: var(--bg-sec-trending);
-    flex-direction: column;
-    width: 100%;
-    height: 90vh;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    position: relative;
-    align-content: center;
-   justify-content: center;
-
-   .trend-head {
-      margin-bottom: 40px;
-      
-   }
-
-    
-   h2 {
+   background-color: var(--bg-sec-trending);
+   padding: 10vh 0 8vh 0;
+   text-align: center;
+   position: relative;
+ 
+   &__title {
       color: var(--color-text-blue);
-        font-size: 25px;
-        text-align: center;
-        padding-top: 10px;
-        padding-bottom: 0;
-        margin: 0;
+      font-size: 25px;
+      text-align: center;
+      margin: 10px;
    } 
 
-   p {
+   &__text {
     font-family: 'Roboto', sans-serif;
     text-align: center;
     color: var(--color-text-black);
+    margin: 10px;
    }
 
    .next-gif{
       position: absolute;
-      right: .5%; top:60%;
+      right: .5%; top:50%;
       width: 2.5rem;
       height: 2.5rem;
       background-image: var(--btn-slider-rgh);
       background-repeat: no-repeat;
       background-color:var(--bg-sec-trending);
       cursor: pointer;
-      z-index: 4;
+      z-index: 998;
       &:hover {
          background-image: var(--btn-slider-rgh-ho);
          background-repeat: no-repeat;
@@ -50,14 +43,14 @@
    
    .prev-gif {
       position: absolute;
-      left: .5%; top: 60%;
+      left: .5%; top: 50%;
       width: 2.5rem;
       height: 2.5rem;
       background-image: var(--btn-slider-lf);
       background-color: var(--bg-sec-trending);
       background-repeat: no-repeat;
       cursor: pointer;
-      z-index: 4;
+      z-index: 998;
          &:hover {
             background-image: var(--btn-slider-lf-ho);
             background-repeat: no-repeat;
@@ -66,36 +59,31 @@
    
 };
 
+.trend-slider-cont {
+   max-width: 100%;
+	display: flex;
+	align-items: center;
+   position: relative;
+}
+
 .trend-container {
-   overflow-x: hidden;
    width: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   height: 255px;
-   align-content: center;
-   margin-top: 20px;
-   scrollbar-width: none;
-   
-   &::-webkit-scrollbar {
-         display: none;
-   }
-   &:first-child {
-      margin-left: 50px;
+	display: flex;
+	overflow: scroll;
+   @include breakpoint-up(medium) {
+      overflow: hidden;
    }
 }
 
-// ················· min-width 1024px
-@include breakpoint-up (large){
-   .trending-slider-box {
-       overflow-x: hidden;
-       width: 795px;
+.trending-slider-box {
+   overflow: hidden;
+   @include breakpoint-up(medium) {
+      padding: 8vh 0 8vh 0;
    }
-}
-
-// ················ min-width 1440px
-@include breakpoint-up (xlarge){
-   .trending-slider-box {
-      width: 1133px;
+   @include breakpoint-up(large) {
+      padding: 10vh 2vw 10vh 2vw;
+   }
+   @include breakpoint-up(xlarge) {
+      padding: 8vh 4vw 8vh 4vw;
    }
 }

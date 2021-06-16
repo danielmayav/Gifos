@@ -2,47 +2,47 @@
   --page-background:      #FFFFFF;
   --color-text-blue:      #572EE5;
   --color-text-black:     #000000;
-  --hamburguer-close:     url('/assets/burger.svg');
-  --hamburguer-open:      url('/assets/close.svg');
+  --hamburguer-close:     url('./assets/burger.svg');
+  --hamburguer-open:      url('./assets/close.svg');
   --background-overlay:   #572EE5;
   --bg-sec-trending:      #F3F5F8;
-  --search-icon:          url('/assets/icon-search.svg');
-  --fb-icon-hover:        url('/assets/icon_facebook_hover.svg');
-  --in-icon-hover:        url('/assets/icon_instagram-hover.svg');
-  --tw-icon-hover:        url('/assets/icon-twitter-hover.svg');
-  --creargif-icon:        url('/assets/button-crear-gifo.svg');
-  --creargif-hover:       url('/assets//CTA-crear-gifo-hover.svg');
-  --btn-slider-lf:        url('/assets/button-slider-left.svg');
-  --btn-slider-lf-ho:     url('/assets/button-slider-left-hover.svg');
-  --btn-slider-rgh:       url('/assets/Button-Slider-right.svg');
-  --btn-slider-rgh-ho:    url('/assets/Button-Slider-right-hover.svg');
-  --btn-fav:              url('/assets/icon-fav.svg');
-  --btn-fav-ho:           url('/assets/icon-fav-hover.svg');
-  --btn-fav-act:          url('/assets/icon-fav-active.svg');
-  --btn-dwld:             url('/assets/icon-download.svg');
-  --btn-dwld-ho:          url('/assets/icon-download-hover.svg');
-  --btn-max:              url('/assets/icon-max-normal.svg');
-  --btn-max-ho:           url('/assets/icon-max-hover.svg');
+  --search-icon:          url('./assets/icon-search.svg');
+  --fb-icon-hover:        url('./assets/icon_facebook_hover.svg');
+  --in-icon-hover:        url('./assets/icon_instagram-hover.svg');
+  --tw-icon-hover:        url('./assets/icon-twitter-hover.svg');
+  --creargif-icon:        url('./assets/button-crear-gifo.svg');
+  --creargif-hover:       url('./assets//CTA-crear-gifo-hover.svg');
+  --btn-slider-lf:        url('./assets/button-slider-left.svg');
+  --btn-slider-lf-ho:     url('./assets/button-slider-left-hover.svg');
+  --btn-slider-rgh:       url('./assets/Button-Slider-right.svg');
+  --btn-slider-rgh-ho:    url('./assets/Button-Slider-right-hover.svg');
+  --btn-fav:              url('./assets/icon-fav.svg');
+  --btn-fav-ho:           url('./assets/icon-fav-hover.svg');
+  --btn-fav-act:          url('./assets/icon-fav-active.svg');
+  --btn-dwld:             url('./assets/icon-download.svg');
+  --btn-dwld-ho:          url('./assets/icon-download-hover.svg');
+  --btn-max:              url('./assets/icon-max-normal.svg');
+  --btn-max-ho:           url('./assets/icon-max-hover.svg');
 }
 
 .dark {
   --page-background:      #37383C;
   --color-text-blue:      #FFFFFF;
   --color-text-black:     #FFFFFF;
-  --hamburguer-close:     url('/assets/burger-modo-noct.svg');
-  --hamburguer-open:      url('/assets/close-modo-noct.svg');
+  --hamburguer-close:     url('./assets/burger-modo-noct.svg');
+  --hamburguer-open:      url('./assets/close-modo-noct.svg');
   --background-overlay:   #000000;
   --bg-sec-trending:      #222326;
-  --search-icon:          url('/assets/icon-search-modo-noct.svg');
-  --fb-icon-hover:        url('/assets/icon_facebook_noc.svg');
-  --in-icon-hover:        url('/assets/icon_instagram_noc.svg');
-  --tw-icon-hover:        url('/assets/icon_twitter_noc.svg');
-  --creargif-icon:        url('/assets/CTA-crear-gifo-modo-noc.svg');
-  --creargif-hover:       url('/assets//CTA-crear-gifo-hover-modo-noc.svg');
-  --btn-slider-lf:        url('/assets/button-slider-left-md-noct.svg');
-  --btn-slider-lf-ho:     url('/assets/button-slider-left-hover.svg');
-  --btn-slider-rgh:       url('/assets/button-slider-right-md-noct.svg');
-  --btn-slider-rgh-ho:    url('/assets/Button-Slider-right-hover.svg');
+  --search-icon:          url('./assets/icon-search-modo-noct.svg');
+  --fb-icon-hover:        url('./assets/icon_facebook_noc.svg');
+  --in-icon-hover:        url('./assets/icon_instagram_noc.svg');
+  --tw-icon-hover:        url('./assets/icon_twitter_noc.svg');
+  --creargif-icon:        url('./assets/CTA-crear-gifo-modo-noc.svg');
+  --creargif-hover:       url('./assets//CTA-crear-gifo-hover-modo-noc.svg');
+  --btn-slider-lf:        url('./assets/button-slider-left-md-noct.svg');
+  --btn-slider-lf-ho:     url('./assets/button-slider-left-hover.svg');
+  --btn-slider-rgh:       url('./assets/button-slider-right-md-noct.svg');
+  --btn-slider-rgh-ho:    url('./assets/Button-Slider-right-hover.svg');
 }
 
 /* @media (min-width: 64em) {
@@ -583,56 +583,45 @@ img {
           justify-content: center;
 }
 
+.tags-link {
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
 .trending {
   background-color: var(--bg-sec-trending);
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  height: 90vh;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding: 10vh 0 8vh 0;
+  text-align: center;
   position: relative;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-.trending .trend-head {
-  margin-bottom: 40px;
-}
-
-.trending h2 {
+.trending__title {
   color: var(--color-text-blue);
   font-size: 25px;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 0;
-  margin: 0;
+  margin: 10px;
 }
 
-.trending p {
+.trending__text {
   font-family: 'Roboto', sans-serif;
   text-align: center;
   color: var(--color-text-black);
+  margin: 10px;
 }
 
 .trending .next-gif {
   position: absolute;
   right: .5%;
-  top: 60%;
+  top: 50%;
   width: 2.5rem;
   height: 2.5rem;
   background-image: var(--btn-slider-rgh);
   background-repeat: no-repeat;
   background-color: var(--bg-sec-trending);
   cursor: pointer;
-  z-index: 4;
+  z-index: 998;
 }
 
 .trending .next-gif:hover {
@@ -643,14 +632,14 @@ img {
 .trending .prev-gif {
   position: absolute;
   left: .5%;
-  top: 60%;
+  top: 50%;
   width: 2.5rem;
   height: 2.5rem;
   background-image: var(--btn-slider-lf);
   background-color: var(--bg-sec-trending);
   background-repeat: no-repeat;
   cursor: pointer;
-  z-index: 4;
+  z-index: 998;
 }
 
 .trending .prev-gif:hover {
@@ -658,43 +647,50 @@ img {
   background-repeat: no-repeat;
 }
 
-.trend-container {
-  overflow-x: hidden;
-  width: 100%;
+.trend-slider-cont {
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 255px;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  margin-top: 20px;
-  scrollbar-width: none;
+  position: relative;
 }
 
-.trend-container::-webkit-scrollbar {
-  display: none;
+.trend-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: scroll;
 }
 
-.trend-container:first-child {
-  margin-left: 50px;
+@media (min-width: 40rem) {
+  .trend-container {
+    overflow: hidden;
+  }
+}
+
+.trending-slider-box {
+  overflow: hidden;
+}
+
+@media (min-width: 40rem) {
+  .trending-slider-box {
+    padding: 8vh 0 8vh 0;
+  }
 }
 
 @media (min-width: 64rem) {
   .trending-slider-box {
-    overflow-x: hidden;
-    width: 795px;
+    padding: 10vh 2vw 10vh 2vw;
   }
 }
 
 @media (min-width: 87.5rem) {
   .trending-slider-box {
-    width: 1133px;
+    padding: 8vh 4vw 8vh 4vw;
   }
 }
 
@@ -790,22 +786,29 @@ footer .footer-icons-in:hover {
 
 @media (max-width: 39.9375rem) {
   .gif-cont {
-    width: 280px;
+    min-width: 280px;
     height: 200px;
   }
 }
 
 @media (min-width: 40rem) {
   .gif-cont {
-    width: 360px;
+    min-width: 360px;
     height: 280px;
+  }
+}
+
+@media (min-width: 64rem) {
+  .gif-cont {
+    min-width: 320px;
+    height: 240px;
   }
 }
 
 @media (min-width: 87.5rem) {
   .gif-cont {
-    width: 320px;
-    height: 240px;
+    min-width: 340px;
+    height: 260px;
   }
 }
 

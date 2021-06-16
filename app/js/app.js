@@ -34,27 +34,27 @@ function renderSugg (data){
     let suggestion = data.data;
     sugList.innerHTML = `
     <li class="suggestion">
-        <img src="/assets/icon-search-gris.svg" alt="sugerencia-lupa-gris"
+        <img src="./assets/icon-search-gris.svg" alt="sugerencia-lupa-gris"
         class="sugerencia-lupa-gris">
         <p class="sugg-text">${suggestion[0].name}</p>
     </li>
     <li class="suggestion">
-        <img src="/assets/icon-search-gris.svg" alt="sugerencia-lupa-gris"
+        <img src="./assets/icon-search-gris.svg" alt="sugerencia-lupa-gris"
         class="sugerencia-lupa-gris">
         <p class="sugg-text">${suggestion[1].name}</p>
     </li>
     <li class="suggestion">
-        <img src="/assets/icon-search-gris.svg" alt="sugerencia-lupa-gris"
+        <img src="./assets/icon-search-gris.svg" alt="sugerencia-lupa-gris"
         class="sugerencia-lupa-gris">
         <p class="sugg-text">${suggestion[2].name}</p>
     </li>
     <li class="suggestion">
-        <img src="/assets/icon-search-gris.svg" alt="sugerencia-lupa-gris"
+        <img src="./assets/icon-search-gris.svg" alt="sugerencia-lupa-gris"
         class="sugerencia-lupa-gris">
         <p class="sugg-text">${suggestion[3].name}</p>
     </li>
     <li class="suggestion">
-        <img src="/assets/icon-search-gris.svg" alt="sugerencia-lupa-gris"
+        <img src="./assets/icon-search-gris.svg" alt="sugerencia-lupa-gris"
         class="sugerencia-lupa-gris">
         <p class="sugg-text">${suggestion[4].name}</p>
     </li>
@@ -75,7 +75,7 @@ searchGif.addEventListener('submit', function(e){
    search(q)
 })
 console.log(searchBar.value)
-async function search (q){
+function search(q) {
     const searchPath = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${q}&limit=12&offset=${offsetSearch}`;
     console.log(searchPath)
     searchResult.innerHTML = ''
@@ -89,7 +89,7 @@ async function search (q){
                 searchResult.innerHTML = `
                 <div class="search-no-results">
                 <img
-                src="/assets/icon-busqueda-sin-resultado.svg"
+                src="./assets/icon-busqueda-sin-resultado.svg"
                 >
                 <p>Intenta con otra búsqueda.</p>
                 </div>
@@ -99,9 +99,8 @@ async function search (q){
                 renderSearch(json.data[i])
                 btnVermas.style.display = 'block'
             }}
-        }) .catch (function(err){
-            console.log(err.message)
-        })
+        }) .catch (err => console.log(err)
+        )
 }
 
 function renderSearch(obj) {
@@ -155,7 +154,7 @@ function searchVerMas (){
                 searchResult.innerHTML = `
                 <div class="search-no-results">
                 <img
-                src="/assets/icon-busqueda-sin-resultado.svg"
+                src="./assets/icon-busqueda-sin-resultado.svg"
                 >
                 <p>Intenta con otra búsqueda.</p>
                 </div>
