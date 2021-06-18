@@ -1,0 +1,93 @@
+.expand-overlay {
+    visibility: hidden;
+    position: fixed;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100%;
+    background-color: var(--bg-color-opa);
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    .expand-cont {
+        display: flex;
+        flex-direction: column;
+        max-width: 70vw;
+        max-height: 80vh;
+    }
+    .close {
+        position: absolute;
+        right: 10vw; top: 10vh;
+    }
+
+    &__details {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        padding: 10px 0;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 70%;
+        p {
+            margin: 5px;
+            padding: 0;
+            color: var(--color-text-black);
+        }
+        h3 {
+            margin: 5px;
+            padding: 0;
+            color: var(--color-text-black);
+        }
+    }
+    &__buttons {
+        display: flex;
+        align-items: center;
+    }
+    .expd-gif {
+        max-height: 100%;
+        max-width: 100%;
+        opacity: 1;
+
+    }
+    button {
+        width: 2rem;
+        height: 2rem;
+        margin: 5px;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+    }
+    #favExpnd {
+        background-image: var(--btn-fav);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: var(--bg-color-opa);
+        transition: 300ms;
+        &:hover {
+            background-image: var(--btn-fav-ho);
+        }
+    }
+    #dwldExpnd {
+        background-image: var(--btn-dwld);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: var(--bg-color-opa);
+        transition: 300ms;
+        &:hover {
+            background-image: var(--btn-dwld-ho);
+        }
+    }
+    .close {
+        background-image: var(--icn-close);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: var(--bg-color-opa);
+        &:hover {
+            transform: scale(1.3);
+        }
+    }
+}

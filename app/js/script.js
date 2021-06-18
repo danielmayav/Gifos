@@ -1,13 +1,3 @@
-const body = document.body;
-const hamburguerBtn = document.querySelector('#hamburguerBtn');
-const header = document.querySelector('.header');
-const overlay = document.querySelector('.overlay');
-const navLinks = document.querySelector('#nav-links');
-const main = document.querySelector('.main');
-const searchBar = document.querySelector('#searchBar');
-const searchBtn = document.querySelector('#searchBtn');
-const searchGif = document.querySelector('#searchGif');
-
 // NAVBAR - HAMBUERGUER MENU
 hamburguerBtn.addEventListener('click', function(){
     console.log('click hamburguer');
@@ -38,6 +28,58 @@ searchBar.addEventListener('focus', () => {
 searchBar.addEventListener('blur', ()=> {
   searchBtn.style.alignSelf ="flex-end"
   
-  }) 
+}) 
 
+// REND MAIN
+function rendMain () {
+  if (FAVORITES_SECTION.classList.contains('section-act')) {
+    FAVORITES_SECTION.classList.remove('section-act')
+    FAVORITES_SECTION.classList.add('section-not-act')
+    SEARCH_SECTION.classList.remove('section-not-act')
+    SEARCH_SECTION.classList.add('section-act')
+    
+    }
+   else {(MISGIFS_SECTION.classList.contains('section-act')) 
+    MISGIFS_SECTION.classList.remove('section-act')
+    MISGIFS_SECTION.classList.add('section-not-act');
+    SEARCH_SECTION.classList.remove('section-not-act')
+    SEARCH_SECTION.classList.add('section-act')
+    
+   }
+   
+}
 
+// REND FAVORITES
+function rendFavoritos () {
+  console.log('function rendFavoritos')
+  renderFavs()
+  if (SEARCH_SECTION.classList.contains('section-act')) {
+    FAVORITES_SECTION.classList.remove('section-not-act')
+    FAVORITES_SECTION.classList.add('section-act')
+    SEARCH_SECTION.classList.add('section-not-act')
+    SEARCH_SECTION.classList.remove('section-act')
+    }
+   else {(MISGIFS_SECTION.classList.contains('section-act')) 
+    MISGIFS_SECTION.classList.remove('section-act')
+    MISGIFS_SECTION.classList.add('section-not-act');
+    FAVORITES_SECTION.classList.remove('section-not-act')
+    FAVORITES_SECTION.classList.add('section-act')
+   }
+   
+}
+// REND MIS GIFS
+function rendMisgifs() {
+  //console.log('mis gifos')
+  if (SEARCH_SECTION.classList.contains('section-act')) {
+    MISGIFS_SECTION.classList.remove('section-not-act')
+    MISGIFS_SECTION.classList.add('section-act')
+    SEARCH_SECTION.classList.add('section-not-act')
+    SEARCH_SECTION.classList.remove('section-act')
+    }
+   else {(FAVORITES_SECTION.classList.contains('section-act')) 
+    FAVORITES_SECTION.classList.remove('section-act')
+    FAVORITES_SECTION.classList.add('section-not-act')
+    MISGIFS_SECTION.classList.remove('section-not-act');
+    MISGIFS_SECTION.classList.add('section-act')
+   }
+  }

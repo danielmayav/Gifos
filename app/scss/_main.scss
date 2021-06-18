@@ -4,13 +4,23 @@
     height: auto;
     align-content: center;
     width: 100%;
-    
+
+    .section-act {
+        display: grid;
+        place-items: center;
+    }
+
+    .section-not-act {
+        display: none;
+    }
+
     h1 {
         color: var(--color-text-blue);
         font-size: 35px;
         text-align: center;
         padding: 30px;
     }
+
 
     h2 {
         color: var(--color-text-blue);
@@ -89,6 +99,7 @@
         }
         .input-text {
             margin-left: 3%;
+            font-size: 1em;
             width: 70%;
             border: none;
             outline: none;
@@ -176,7 +187,7 @@
 
     .btn-vermas {
         display: none;
-        background-color: var(--color-page-background);
+        background-color: var(--page-background);
         padding: 15px;
         color: var(--color-text-blue);
         border: 1px solid var(--color-text-blue);
@@ -185,6 +196,10 @@
         height: auto;
         margin-top: 20px;
         cursor: pointer;
+        &:hover {
+            color: var(--page-background);
+            background-color: var(--color-text-blue);
+        }
         
     }
     

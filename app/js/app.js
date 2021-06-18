@@ -1,9 +1,3 @@
-const apiKey = "qgKLO2sdzTr5Cniqn4m1BUGs6UiWP5bl";
-const searchResult = document.getElementById('results');
-const btnVermas = document.getElementById('btn-vermas');
-const sugList = document.getElementById('sug-list');
-const inputContainer = document.getElementById('inputContainer');
-const searchTitle = document.getElementById('result-title')
 let offsetSearch = 0;
 
 // ========    SEARCH SUGESTIONS
@@ -116,9 +110,9 @@ function renderSearch(obj) {
     <div class="gif-cont" onclick="maxGifMobile('${urlImg}', '${id}', '${slug}', '${user}', '${title}')")>
     <div class="card-details">
         <div class="icons-details">
-            <button class="card-details__btn __fav" onclick="agregarFavorito('${id}', '${urlImg}', '${title}', '${user}' )" id="icon-fav-${id}"></button>
+            <button class="card-details__btn __fav" onclick="agregarFavorito('${id}', '${urlImg}', '${title}', '${user}', '${slug}' )" id="icon-fav-${id}"></button>
             <button class="card-details__btn __dwld" onclick="descargarGif('${urlImg}', '${slug}')"></button>
-            <button class="card-details__btn __expand" onclick="maxGifDesktop('${urlImg}', '${id}', '${slug}', '${user}', '${title}')"></button>
+            <button class="card-details__btn __expand" onclick="expandGif('${urlImg}', '${title}', '${user}')"></button>
         </div>
         <div class="card-details__text">
             <p>${user}</p>

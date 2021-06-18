@@ -27,6 +27,9 @@
   }
   
   .card-details {
+  @include breakpoint-down (small){
+    visibility: hidden;
+  }
     margin: 0;
     padding: 0;
     display: none;
@@ -92,7 +95,20 @@
               background-position: center;
               opacity: 1;
             }
-           }
+          }
+            .__trash{
+            background-image: var(--icn-trash);
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.7;
+            &:hover {
+              background-image: var(--icn-trash-ho);
+              background-repeat: no-repeat;
+              background-position: center;
+              opacity: 1;
+            }
+            }
+           
         &__text {
            position:absolute;
            bottom: 20px; left: 20px;

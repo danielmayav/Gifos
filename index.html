@@ -8,18 +8,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-
     <title>Gifos</title>
+    <!-- =====     SCRIPTS     ===== -->
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js" defer></script>
+    <script src="./app/js/dom.js" defer></script>
+    <script src="./app/js/app.js" defer></script>
+    <script src="./app/js/gifsFunctions.js" defer></script>
+    <script src="./app/js/trending.js" defer></script>
+    <script src="./app/js/darkmode.js" defer></script>
+    <script src="./app/js/script.js" defer></script>
 </head>
 <body>
+<!-- ===== OVERLAY EXP ====== -->
+    <div id="expand-overlay" class="expand-overlay">
+        <button class="close" onclick="closeExpand()"></button>
+        <div class="expand-cont">
+        <img id="expd-gif" class="expd-gif" src="" alt="">
+        <div class="expand-overlay__details">
+            <div class="expand-overlay__text" id="expd-text">
+                <p>user</p>
+                <h3>title</h3>
+            </div>
+            <div class="expand-overlay__buttons">
+                <button id="favExpnd"></button>
+                <button id="dwldExpnd"></button>
+            </div>
+        </div>
+    </div>
+    </div>
+<!-- ===== END ====== -->
     <header class="header">
         <div class="overlay"></div>
         <nav class="nav flex flex-jc-sb flex-ai-c">
-            <a target="_self" href="/index.html" class="logo"> <img src="./assets/logo.svg" alt="logo"></a>
+            <a target="_self" href="#" class="logo" id="mainLogo" onclick="rendMain()"><img src="./assets/logo.svg" alt="logo"></a>
             <ul class="flex flex-ai-c hide-for-mobile" id="nav-links">
-                <li><a target="_self" href="#" id="modnoct-btn" onclick="diurnoNocturno()" >MODO NOCTURNO</a></li>
-                <li><a target="_blank" href="./html/favoritos.html">FAVORITOS</a></li>
-                <li><a target="_blank" href="./html/misgifos.html">MIS GIFOS</a></li>
+                <li id="modnoct-btn" onclick="diurnoNocturno()">MODO NOCTURNO</li>
+                <li id="favRendBtn" onclick="rendFavoritos()">FAVORITOS</li>
+                <li id="misGifsRendBtn" onclick="rendMisgifs()">MIS GIFOS</li>
                 <li><a target="_self" href="./html/creargifo.html" class="hide-for-mobile">
                     <button class="new-gif-logo"></button>
                 </li></a>
@@ -29,9 +54,10 @@
             
         </nav>
     </header>
-<!--===========           MAIN TITLE/ILUSTRATION      ===============>    -->
+<!--===========           SEARCH-SECTION - MAIN TITLE/ILUSTRATION      ===============>    -->
     <main class="main flex flex-jc-c flex-ai-c">
-        <h1 class="">Inspírate, busca, guarda, y crea los mejores <b>GIFOS</b></h1> 
+    <section id="searchSection" class="section-act"> <!-- ·······   SEARCH SECTION  ······· -->
+        <h1 class="title">Inspírate, busca, guarda, y crea los mejores <b>GIFOS</b></h1> 
         <img src="./assets/ilustra_header.svg" alt="ilustración" class="ilustration">
 
 <!--===========           SEARCHBAR      ===============>    -->
@@ -43,19 +69,35 @@
             </ul>
         </div>
         </form>
-<!-- ============>           END         <===============-->
 <!-- ============       SEARCHRESULTS     ===============-->
         <h2 id="result-title"></h2>
-       <div id="results" class="results"></div>
-       <button class="btn-vermas" id="btn-vermas">VER MAS</button>
-<!-- ============           END         ===============-->
-    <section class="main flex flex-jc-c flex-ai-c">
+        <div id="results" class="results"></div>
+        <button class="btn-vermas" id="btn-vermas">VER MAS</button>
+        <!-- ····       TAGS        ····· -->
+        <section class="main flex flex-jc-c flex-ai-c">
         <h3>Trending:</h3>
         <p id="topics-trend"></p>
-      
-    </section>
-    </main>
-<!--===========            TRENDING       ==========-->
+        </section>
+</section>
+<!-- ============           END         ===============-->
+<!-- ============         FAVORITES     ===============-->
+    <section id="favoritesSection" class="section-not-act">
+        <img src="./assets/icon-favoritos.svg" alt="">
+        <h2>Favoritos</h2>
+        <div id="favoritesRender" class="results"></div>
+    </section> 
+<!-- ============      END     ===============-->
+<!-- ============         MIS GIFOS     ===============-->
+<section id="misgifosSection" class="section-not-act">
+    <img src="./assets/icon-mis-gifos.svg" alt="">
+    <h2>Mis Gifos</h2>
+    <div id="favoritesRender" class="results"></div>
+</section> 
+<!-- ============         END     ===============-->
+</main>
+
+<!--=============   TRENDING   =============-->
+<!--===========            TRENDING - SLIDE       ==========-->
     <section class="trending">
         <h2 class="trending__title">Trending GIFOS</h2>
         <p class="trending__text">Mira los últimos GIFOS de nuestra comunidad.</p>  
@@ -89,14 +131,6 @@
        
 
     </footer>
-<!-- ============       END          ===========-->
-<!-- ============       SCRIPTS         ===========-->
-<script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
-<script src="./app/js/script.js"></script>
-<script src="./app/js/app.js"></script>
-<script src="./app/js/trending.js"></script>
-<script src="./app/js/gifsFunctions.js"></script>
-<script src="./app/js/darkmode.js"></script>
 <!-- ============       END          ===========-->
 </body>
 </html>

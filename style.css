@@ -6,6 +6,7 @@
   --hamburguer-open:      url('./assets/close.svg');
   --background-overlay:   #572EE5;
   --bg-sec-trending:      #F3F5F8;
+  --bg-color-opa:         rgba(255, 255, 255, 0.9);
   --search-icon:          url('./assets/icon-search.svg');
   --fb-icon-hover:        url('./assets/icon_facebook_hover.svg');
   --in-icon-hover:        url('./assets/icon_instagram-hover.svg');
@@ -23,10 +24,14 @@
   --btn-dwld-ho:          url('./assets/icon-download-hover.svg');
   --btn-max:              url('./assets/icon-max-normal.svg');
   --btn-max-ho:           url('./assets/icon-max-hover.svg');
+  --icn-trash:            url('./assets/icon-trash-normal.svg');
+  --icn-trash-ho:         url('./assets/icon-trash-hover.svg');
+  --icn-close:            url('./assets/close.svg');
 }
 
 .dark {
   --page-background:      #37383C;
+  --bg-color-opa:          rgba(55, 56, 60,0.9);
   --color-text-blue:      #FFFFFF;
   --color-text-black:     #FFFFFF;
   --hamburguer-close:     url('./assets/burger-modo-noct.svg');
@@ -43,6 +48,7 @@
   --btn-slider-lf-ho:     url('./assets/button-slider-left-hover.svg');
   --btn-slider-rgh:       url('./assets/button-slider-right-md-noct.svg');
   --btn-slider-rgh-ho:    url('./assets/Button-Slider-right-hover.svg');
+  --icn-close:            url('./assets/close-modo-noct.svg');
 }
 
 /* @media (min-width: 64em) {
@@ -63,6 +69,139 @@
   to {
     opacity: 0.9;
   }
+}
+
+.expand-overlay {
+  visibility: hidden;
+  position: fixed;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100%;
+  background-color: var(--bg-color-opa);
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+}
+
+.expand-overlay .expand-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 70vw;
+  max-height: 80vh;
+}
+
+.expand-overlay .close {
+  position: absolute;
+  right: 10vw;
+  top: 10vh;
+}
+
+.expand-overlay__details {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 10px 0;
+}
+
+.expand-overlay__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 70%;
+}
+
+.expand-overlay__text p {
+  margin: 5px;
+  padding: 0;
+  color: var(--color-text-black);
+}
+
+.expand-overlay__text h3 {
+  margin: 5px;
+  padding: 0;
+  color: var(--color-text-black);
+}
+
+.expand-overlay__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.expand-overlay .expd-gif {
+  max-height: 100%;
+  max-width: 100%;
+  opacity: 1;
+}
+
+.expand-overlay button {
+  width: 2rem;
+  height: 2rem;
+  margin: 5px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.expand-overlay #favExpnd {
+  background-image: var(--btn-fav);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--bg-color-opa);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.expand-overlay #favExpnd:hover {
+  background-image: var(--btn-fav-ho);
+}
+
+.expand-overlay #dwldExpnd {
+  background-image: var(--btn-dwld);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--bg-color-opa);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.expand-overlay #dwldExpnd:hover {
+  background-image: var(--btn-dwld-ho);
+}
+
+.expand-overlay .close {
+  background-image: var(--icn-close);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--bg-color-opa);
+}
+
+.expand-overlay .close:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 html {
@@ -111,14 +250,6 @@ body {
 
 a {
   color: #572EE5;
-}
-
-a:visited {
-  color: #9CAFC3;
-}
-
-a:link, a:visited {
-  text-decoration: none;
 }
 
 @media (max-width: 39.9375rem) {
@@ -213,17 +344,20 @@ img {
   padding: 0;
 }
 
+.header ul li {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .header ul li:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   -webkit-text-decoration-color: #50E3C2;
           text-decoration-color: #50E3C2;
   text-decoration-thickness: 2px;
-  text-underline-position: under;
-  color: var(--color-text-blue);
 }
 
-.header ul li:visited {
+.header ul a:visited {
   color: var(--color-text-blue);
 }
 
@@ -323,6 +457,16 @@ img {
   -ms-flex-line-pack: center;
       align-content: center;
   width: 100%;
+}
+
+.main .section-act {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.main .section-not-act {
+  display: none;
 }
 
 .main h1 {
@@ -430,6 +574,7 @@ img {
 
 .main .input-text {
   margin-left: 3%;
+  font-size: 1em;
   width: 70%;
   border: none;
   outline: none;
@@ -516,7 +661,7 @@ img {
 
 .main .btn-vermas {
   display: none;
-  background-color: var(--color-page-background);
+  background-color: var(--page-background);
   padding: 15px;
   color: var(--color-text-blue);
   border: 1px solid var(--color-text-blue);
@@ -525,6 +670,11 @@ img {
   height: auto;
   margin-top: 20px;
   cursor: pointer;
+}
+
+.main .btn-vermas:hover {
+  color: var(--page-background);
+  background-color: var(--color-text-blue);
 }
 
 .main .results {
@@ -832,6 +982,12 @@ footer .footer-icons-in:hover {
   height: 100%;
 }
 
+@media (max-width: 39.9375rem) {
+  .gif-cont .card-details {
+    visibility: hidden;
+  }
+}
+
 .gif-cont .card-details .icons-details {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -896,6 +1052,20 @@ footer .footer-icons-in:hover {
 
 .gif-cont .card-details .__expand:hover {
   background-image: var(--btn-max-ho);
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1;
+}
+
+.gif-cont .card-details .__trash {
+  background-image: var(--icn-trash);
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+}
+
+.gif-cont .card-details .__trash:hover {
+  background-image: var(--icn-trash-ho);
   background-repeat: no-repeat;
   background-position: center;
   opacity: 1;

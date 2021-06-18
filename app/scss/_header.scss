@@ -36,8 +36,6 @@
         }
     }
 
-   
-
     .logo img {
         width: 48px;
         height: 48px;
@@ -53,14 +51,19 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
+        li{
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
         li:hover {
             text-decoration-line: underline;
             text-decoration-color: $lightBlue;
             text-decoration-thickness: 2px;
-            text-underline-position: under;
-            color: var(--color-text-blue);
+            //text-underline-position: under;
+            //color: var(--color-text-blue);
         }
-        li:visited {
+        a:visited {
             color: var(--color-text-blue)
         }
     }
@@ -80,8 +83,6 @@
         }
     }
 
-    
-        
         // For hamburger menu X
     .open-ham {
             width: 20px;
@@ -92,8 +93,6 @@
 
     
 }
-
-
 
 .overlay {
     opacity: 0;
@@ -110,7 +109,6 @@
                 z-index: 0;
             }
 
-    
 }
 
 .nav-links {

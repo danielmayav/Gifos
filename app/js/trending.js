@@ -51,9 +51,9 @@ async function trend () {
             <div class="gif-cont" onclick="maxGifMobile('${urlImg}', '${id}', '${slug}', '${user}', '${title}')">
                 <div class="card-details">
                     <div class="icons-details">
-                        <button class="card-details__btn __fav" onclick="agregarFavorito('${id}')" id="icon-fav-trending-${id}"></button>
-                        <button class="card-details__btn __dwld" onclick="descargarGif('${urlImg}', '${slug}')"></button>
-                        <button class="card-details__btn __expand" onclick="maxGifDesktop('${urlImg}', '${id}', '${slug}', '${user}', '${title}')"></button>
+                    <button class="card-details__btn __fav" onclick="agregarFavorito('${id}', '${urlImg}', '${title}', '${user}', '${slug}' )" id="icon-fav-${id}"></button>
+                    <button class="card-details__btn __dwld" onclick="descargarGif('${urlImg}', '${slug}')"></button>
+                    <button class="card-details__btn __expand" onclick="expandGif('${urlImg}', '${title}', '${user}')"></button>
                     </div>
                     <div class="card-details__text">
                         <p>${user}</p>

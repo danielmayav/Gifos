@@ -23,6 +23,7 @@ $black-background:  #000000;
     --hamburguer-open:      url('./assets/close.svg');
     --background-overlay:   #{$darkblue};
     --bg-sec-trending:      #{$backgroundgray};
+    --bg-color-opa:         rgba(255, 255, 255, 0.9);
     --search-icon:          url('./assets/icon-search.svg');
     --fb-icon-hover:        url('./assets/icon_facebook_hover.svg');
     --in-icon-hover:        url('./assets/icon_instagram-hover.svg');
@@ -40,12 +41,15 @@ $black-background:  #000000;
     --btn-dwld-ho:          url('./assets/icon-download-hover.svg');
     --btn-max:              url('./assets/icon-max-normal.svg');
     --btn-max-ho:           url('./assets/icon-max-hover.svg');
-
+    --icn-trash:            url('./assets/icon-trash-normal.svg');
+    --icn-trash-ho:         url('./assets/icon-trash-hover.svg');
+    --icn-close:            url('./assets/close.svg');
 }
 
 
 .dark {
     --page-background:      #{$dark-background};
+    --bg-color-opa:          rgba(55, 56, 60,0.9);
     --color-text-blue:      #{$white};
     --color-text-black:     #{$white};
     --hamburguer-close:     url('./assets/burger-modo-noct.svg');
@@ -62,4 +66,5 @@ $black-background:  #000000;
     --btn-slider-lf-ho:     url('./assets/button-slider-left-hover.svg');
     --btn-slider-rgh:       url('./assets/button-slider-right-md-noct.svg');
     --btn-slider-rgh-ho:    url('./assets/Button-Slider-right-hover.svg');
+    --icn-close:            url('./assets/close-modo-noct.svg');
 }
