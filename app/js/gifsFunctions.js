@@ -34,7 +34,7 @@ function renderFavs() {
     //favoritosArr = []
     favoritosArr = JSON.parse(localStorage.getItem('favorites'))
     FAV_CONT.innerHTML = ''
-    if (favoritosArr == null) { 
+    if (favoritosArr == null || favoritosArr == 0) { 
         FAV_CONT.innerHTML = `
         <div class="fav-sin-contenido">
         <img src="./assets/icon-fav-sin-contenido.svg" alt="sin contenido">
@@ -71,10 +71,10 @@ function renderMisGifs() {
     misGifsArr = JSON.parse(localStorage.getItem('misGifos'))
     MISGIFS_CONT.innerHTML = ''
     console.log(misGifsArr)
-    if (misGifsArr == null) { 
+    if (misGifsArr == null || misGifsArr == 0) { 
         MISGIFS_CONT.innerHTML = `
         <div class="fav-sin-contenido">
-        <img src="../assets/icon-mis-gifos-sin-contenido.svg" alt="sin contenido">
+        <img src="./assets/icon-mis-gifos-sin-contenido.svg" alt="Crea tus Gifs">
         <p>¡Anímate a crear tu propio contenido!</p>
         </div>
         `
