@@ -43,6 +43,7 @@
         display: grid;
         place-items: center;
         position: relative;
+        z-index: 1;
     }
         .search-btn{
             background-color: var(--color-page-background);
@@ -100,7 +101,7 @@
         .input-text {
             margin-left: 3%;
             font-size: 1em;
-            width: 70%;
+            width: 90%;
             border: none;
             outline: none;
             height: 2rem;
@@ -240,4 +241,19 @@
     justify-content: center;
 }
 
+.fav-sin-contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0 7rem 0;
+
+    p {
+        margin: 2rem 0;
+        padding: 2rem 0;
+        font-size: 1.375em;
+        font-weight: 600;
+        color: $lightBlue;
+    }
+}
 

@@ -12,24 +12,53 @@
     <title>New Gif</title>
 </head>
 <body>
-    <header class="header">
-        <div class="overlay"></div>
+    <!-- ===== OVERLAY EXPANDED GIF ====== -->
+    <div id="expand-overlay" class="expand-overlay">
+        <button class="close" onclick="closeExpand()"></button>
+        <div class="expand-cont">
+        <img id="expd-gif" class="expd-gif" src="" alt="">
+        <div class="expand-overlay__details">
+            <div class="expand-overlay__text" id="expd-text">
+                <p>user</p>
+                <h3>title</h3>
+            </div>
+            <div class="expand-overlay__buttons" id="expand-btns">
+                <button id="favExpnd"></button>
+                <button id="dwldExpnd"></button>
+            </div>
+        </div>
+    </div>
+    </div>
+<!-- ===== END ====== -->
+<header class="header">
+<!-- ======     NAV BAR        ============ -->
         <nav class="nav flex flex-jc-sb flex-ai-c">
-            <a target="_self" href="/index.html" class="logo"> <img src="/assets/logo.svg" alt="logo"></a>
+            <a target="_self" href="../index.html" class="logo" id="mainLogo"><img src="../assets/logo.svg" alt="logo"></a>
             <ul class="flex flex-ai-c hide-for-mobile" id="nav-links">
-                <li><a target="_self" href="#" id="modnoct-btn" onclick="diurnoNocturno()" >MODO NOCTURNO</a></li>
-                <li><a target="_blank" href="/html/favoritos.html">FAVORITOS</a></li>
-                <li><a target="_blank" href="/html/misgifos.html">MIS GIFOS</a></li>
-                <li><a target="_self" href="/html/creargifo.html" class="hide-for-mobile"><img class="new-gif-logo" src="/assets/CTA-crear-gifo-active.svg" alt="crear gifo"></li></a>
+                <li id="modnoct-btn" onclick="diurnoNocturno()">MODO NOCTURNO</li>
+                <li id="favRendBtn" onclick="rendFavoritos()">FAVORITOS</li>
+                <li id="misGifsRendBtn" onclick="rendMisgifs()">MIS GIFOS</li>
+                <li><a target="_self" href="/html/creargifo.html" class="hide-for-mobile">
+                    <img class="new-gif-logo" src="../assets/CTA-crear-gifo-active.svg" alt="crear gifo">
+                    </a>
+                </li>
+
             </ul>
             <a href="#" class="hamburguer hide-for-desktop" id="hamburguerBtn"></a>
-            
-            
         </nav>
+<!-- ·············      OVERLAY MENU        ···············-->
+        <div class="overlay">
+            <ul>
+                <li id="modnoct-btn" onclick="diurnoNocturno()">MODO NOCTURNO</li>
+                <li id="favRendBtn" onclick="rendFavoritos()">FAVORITOS</li>
+                <li id="misGifsRendBtn" onclick="rendMisgifs()">MIS GIFOS</li>
+            </ul>
+            </div>
+<!-- ================ -->
     </header>
 
-<main>
-<section clas="main-newgif">
+<main class="main">
+<section id="new-gif-sec" class="main-newgif">
     <div class="cont-ng">
         <div class="camera-container">
             <img src="/assets/camara.svg" alt="camara" id="camara-ilustracion" class="camara">
@@ -37,13 +66,9 @@
         </div>
 <div class="camera-vid-cont">
     <div class="newgif-cont">
-        <!-- <div class="esquina1"></div>
-        <div class="esquina2"></div>
-        <div class="esquina3"></div>
-        <div class="esquina4"></div> -->
         
         <div class="video-cont">
-            <!-- TODO: CAMBIAR NOMBRES parte insertada -->
+           
             <h2 id="grabar-title">Aquí podrás <br>crear tus propios <span
                 id="gifos-crear">GIFOS</span></h2>
             <p id="grabar-text">¡Crea tu GIFO en sólo 3 pasos!<br>
@@ -58,11 +83,10 @@
                 <img src="/assets/loader.svg" alt="loading gifo" id="overlay-vid-ic">
                 <p id="overlay-vid-p">Estamos subiendo tu GIFO</p>
                 </div>
-            <!-- INSERTADO HASTA ACA -->
 
             </div>
         <video src="" id="video"></video>
-        <img src="" alt="" id="recorded-gif"> <!--TODO: CAMBIAR NOMBRES img-->
+        <img src="" alt="" id="recorded-gif"> 
         </div>
     </div>
 
@@ -72,7 +96,7 @@
             <p class="new-gif-progres">2</p>
             <p class="new-gif-progres">3</p>
         </div>
-        <div class="contador-contenedor"> <!-- TODO: CAMBIAR NOMBRES ESTE DIV FUE INSERTADO -->
+        <div class="contador-contenedor"> 
             <p id="time-counter">0:00:00</p>
             <button id="repeat-rec">repetir captura</button>
         </div>
@@ -85,7 +109,7 @@
 </div>
 <div class="divi-newgif"></div>
 
-<div class="botones-creargifo-contenedor"> <!-- TODO: CAMBIAR / AGREGAR ID's | CSS OK-->
+<div class="botones-creargifo-contenedor"> 
 
     <button id="btn-newgif-start" class="btn-general">Comenzar</button>
     <button id="btn-newgif-rec" class="btn-general">Grabar</button>
@@ -95,6 +119,25 @@
 </div>
 
 </section>
+<!-- =============      MAIN MOBILE         ============= -->
+<section class="main-NG-mob">
+    <p>¡Ingresa desde un PC de escritorio para crear tus GIFOS!</p>
+</section>
+<!-- ============         FAVORITES     ===============-->
+<section id="favoritesSection" class="section-not-act">
+    <img src="../assets/icon-favoritos.svg" alt="">
+    <h2>Favoritos</h2>
+    <div id="favoritesRender" class="results"></div>
+</section> 
+<!-- ============      END     ===============-->
+<!-- ============         MIS GIFOS     ===============-->
+<section id="misgifosSection" class="section-not-act">
+<img src="../assets/icon-mis-gifos.svg" alt="">
+<h2>Mis Gifos</h2>
+<div id="misGifsRender" class="results"></div>
+</section> 
+
+
     </main>
 
    
@@ -116,9 +159,10 @@
        
 
     </footer>
-    
     <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
-    <script src="/app/js/darkmode.js"></script>
-    <script src="/app/js/newgif.js"></script>
+    <script src="../app/js/dom.js"></script>
+    <script src="../app/js/gifsFunctions.js"></script>
+    <script src="../app/js/newgif.js"></script>
+    <script src="../app/js/darkmode.js"></script>
 </body>
 </html>

@@ -14,6 +14,7 @@ const SEARCH_SECTION = document.getElementById('searchSection')
 const FAVORITES_SECTION = document.getElementById('favoritesSection')
 const MISGIFS_SECTION = document.getElementById('misgifosSection')
 const FAV_CONT = document.getElementById('favoritesRender')
+const MISGIFS_CONT = document.getElementById('misGifsRender')
 
 const apiKey = "qgKLO2sdzTr5Cniqn4m1BUGs6UiWP5bl";
 const searchResult = document.getElementById('results');
@@ -25,4 +26,5 @@ const searchTitle = document.getElementById('result-title')
 const EXPAND_OVERLAY = document.getElementById('expand-overlay')
 const EXPAND_GIF = document.getElementById('expd-gif')
 const EXPAND_TEXT= document.getElementById('expd-text')
+const EXPAND_BTNS = document.getElementById('expand-btns')
 // ·······

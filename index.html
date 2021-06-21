@@ -19,7 +19,7 @@
     <script src="./app/js/script.js" defer></script>
 </head>
 <body>
-<!-- ===== OVERLAY EXP ====== -->
+<!-- ===== OVERLAY EXPANDED GIF ====== -->
     <div id="expand-overlay" class="expand-overlay">
         <button class="close" onclick="closeExpand()"></button>
         <div class="expand-cont">
@@ -29,7 +29,7 @@
                 <p>user</p>
                 <h3>title</h3>
             </div>
-            <div class="expand-overlay__buttons">
+            <div class="expand-overlay__buttons" id="expand-btns">
                 <button id="favExpnd"></button>
                 <button id="dwldExpnd"></button>
             </div>
@@ -37,23 +37,34 @@
     </div>
     </div>
 <!-- ===== END ====== -->
-    <header class="header">
-        <div class="overlay"></div>
+
+<header class="header">
         <nav class="nav flex flex-jc-sb flex-ai-c">
             <a target="_self" href="#" class="logo" id="mainLogo" onclick="rendMain()"><img src="./assets/logo.svg" alt="logo"></a>
             <ul class="flex flex-ai-c hide-for-mobile" id="nav-links">
                 <li id="modnoct-btn" onclick="diurnoNocturno()">MODO NOCTURNO</li>
                 <li id="favRendBtn" onclick="rendFavoritos()">FAVORITOS</li>
                 <li id="misGifsRendBtn" onclick="rendMisgifs()">MIS GIFOS</li>
-                <li><a target="_self" href="./html/creargifo.html" class="hide-for-mobile">
-                    <button class="new-gif-logo"></button>
-                </li></a>
+                <li>
+                    <a target="_self" href="/html/creargifo.html" class="hide-for-mobile">
+                        <button class="new-gif-logo" onclick="console.log('crear gif')"></button>
+                    </a>
+                </li>
             </ul>
             <a href="#" class="hamburguer hide-for-desktop" id="hamburguerBtn"></a>
-            
-            
         </nav>
+
+        <!-- ·············      OVERLAY MENU        ···············-->
+        <div class="overlay">
+            <ul>
+                <li id="modnoct-btn" onclick="diurnoNocturno()">MODO NOCTURNO</li>
+                <li id="favRendBtn" onclick="rendFavoritos()">FAVORITOS</li>
+                <li id="misGifsRendBtn" onclick="rendMisgifs()">MIS GIFOS</li>
+            </ul>
+            </div>
+        <!-- ================ -->
     </header>
+        
 <!--===========           SEARCH-SECTION - MAIN TITLE/ILUSTRATION      ===============>    -->
     <main class="main flex flex-jc-c flex-ai-c">
     <section id="searchSection" class="section-act"> <!-- ·······   SEARCH SECTION  ······· -->
@@ -91,7 +102,7 @@
 <section id="misgifosSection" class="section-not-act">
     <img src="./assets/icon-mis-gifos.svg" alt="">
     <h2>Mis Gifos</h2>
-    <div id="favoritesRender" class="results"></div>
+    <div id="misGifsRender" class="results"></div>
 </section> 
 <!-- ============         END     ===============-->
 </main>

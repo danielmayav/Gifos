@@ -34,6 +34,7 @@ window.onload = topicsTags();
 // ········     To render Trends into html
 async function trend () {
     const trendPath = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=12`
+    console.log('trending')
     fetch (trendPath)
     .then (async function (res){
         return await res.json()
@@ -46,14 +47,15 @@ async function trend () {
             let urlImg = obj.images.downsized.url
             let id = obj.id
             let slug = obj.slug
-            trendRender +=  // TODO: check id's and classes <=====
+            let urlFullSize = obj.images.original.url
+            trendRender +=  
             `
-            <div class="gif-cont" onclick="maxGifMobile('${urlImg}', '${id}', '${slug}', '${user}', '${title}')">
+            <div class="gif-cont" onclick="expandGifMob('${urlImg}', '${title}', '${user}', '${slug}', '${id}')">
                 <div class="card-details">
                     <div class="icons-details">
                     <button class="card-details__btn __fav" onclick="agregarFavorito('${id}', '${urlImg}', '${title}', '${user}', '${slug}' )" id="icon-fav-${id}"></button>
                     <button class="card-details__btn __dwld" onclick="descargarGif('${urlImg}', '${slug}')"></button>
-                    <button class="card-details__btn __expand" onclick="expandGif('${urlImg}', '${title}', '${user}')"></button>
+                    <button class="card-details__btn __expand" onclick="expandGif('${urlFullSize}', '${title}', '${user}', '${slug}', '${id}')"></button>
                     </div>
                     <div class="card-details__text">
                         <p>${user}</p>
@@ -70,7 +72,7 @@ async function trend () {
         console.log(err.message);
     })
 }
-trend()
+window.onload = trend()
 
 const nextSlider = () => {
     TREND_SLIDER.scrollLeft +=400;

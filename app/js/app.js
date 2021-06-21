@@ -105,14 +105,15 @@ function renderSearch(obj) {
         urlImg = obj.images.original.url
     }
     let id = obj.id
+    let urlFullSize = obj.images.original.url
     let slug = obj.slug 
     searchResult.innerHTML += `
-    <div class="gif-cont" onclick="maxGifMobile('${urlImg}', '${id}', '${slug}', '${user}', '${title}')")>
+    <div class="gif-cont" onclick="expandGifMob('${urlImg}', '${title}', '${user}', '${slug}', '${id}')">
     <div class="card-details">
         <div class="icons-details">
             <button class="card-details__btn __fav" onclick="agregarFavorito('${id}', '${urlImg}', '${title}', '${user}', '${slug}' )" id="icon-fav-${id}"></button>
             <button class="card-details__btn __dwld" onclick="descargarGif('${urlImg}', '${slug}')"></button>
-            <button class="card-details__btn __expand" onclick="expandGif('${urlImg}', '${title}', '${user}')"></button>
+            <button class="card-details__btn __expand" onclick="expandGif('${urlFullSize}', '${title}', '${user}', '${slug}', '${id}')"></button>
         </div>
         <div class="card-details__text">
             <p>${user}</p>

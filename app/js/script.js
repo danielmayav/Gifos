@@ -4,18 +4,15 @@ hamburguerBtn.addEventListener('click', function(){
     if (hamburguerBtn.classList.contains('hamburguer')){ //hambuerger is open
         hamburguerBtn.classList.remove('hamburguer');
         hamburguerBtn.classList.add('open-ham');
-        overlay.classList.add('overlay-animation');
-        //Nav links
-        navLinks.classList.add('nav-links');
-        navLinks.classList.remove('hide-for-mobile');
+        overlay.style.display = "flex"
+        body.style.overflowY = "hidden"
+ 
     }
-    else { // hambuerguer is close
+    else if (hamburguerBtn.classList.contains('open-ham')){ // hambuerguer is close
         hamburguerBtn.classList.add('hamburguer');
         hamburguerBtn.classList.remove('open-ham');
-        overlay.classList.remove('overlay-animation');
-        //Nav links
-        navLinks.classList.remove('nav-links');
-        navLinks.classList.add('hide-for-mobile')
+        overlay.style.display = "none"
+        body.style.overflowY = "scroll"
     }
     
 });
@@ -69,6 +66,7 @@ function rendFavoritos () {
 }
 // REND MIS GIFS
 function rendMisgifs() {
+  renderMisGifs()
   //console.log('mis gifos')
   if (SEARCH_SECTION.classList.contains('section-act')) {
     MISGIFS_SECTION.classList.remove('section-not-act')

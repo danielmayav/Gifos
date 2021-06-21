@@ -67,6 +67,7 @@
         background-repeat: no-repeat;
         background-color: var(--bg-color-opa);
         transition: 300ms;
+        border-radius: 6px;
         &:hover {
             background-image: var(--btn-fav-ho);
         }
@@ -77,6 +78,7 @@
         background-repeat: no-repeat;
         background-color: var(--bg-color-opa);
         transition: 300ms;
+        border-radius: 6px;
         &:hover {
             background-image: var(--btn-dwld-ho);
         }

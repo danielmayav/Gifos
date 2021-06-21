@@ -1,4 +1,5 @@
-apiKey = "qgKLO2sdzTr5Cniqn4m1BUGs6UiWP5bl";
+//apiKey = "qgKLO2sdzTr5Cniqn4m1BUGs6UiWP5bl";
+const NEWGIF_SECTION = document.getElementById('new-gif-sec')
 const VIDEO = document.querySelector('#video');
 const BTN_START = document.getElementById('btn-newgif-start');
 const BTN_NEWGIF_REC = document.getElementById('btn-newgif-rec');
@@ -22,8 +23,6 @@ let dateStarted;
 let form = new FormData();
 let misGifosArray = [];
 let misGifosString = localStorage.getItem("misGifos");
-
-
 
 
 BTN_START.addEventListener('click', newGifStart);
@@ -61,8 +60,6 @@ function newGifStart() {
                 type: 'gif'
             });
         })
-
-
 }
 
 BTN_NEWGIF_REC.addEventListener('click', gifRecord);
@@ -90,7 +87,6 @@ function gifRecord() {
     })();
 }
 
-
 // ···· FINALIZAR BTN -> SUBIR GIFO, CONTADOR DESAPARECE -> APARECE REPETIR CAPTURA
 
 BTN_NEWGIF_STOP.addEventListener('click', finalizarGifo);
@@ -113,13 +109,9 @@ function finalizarGifo() {
         RECORDED_GIF.src = URL.createObjectURL(recorder.getBlob());
 
         form.append('file', recorder.getBlob(), 'myGif.gif');
-        form.append('api_key', apiKey); // TODO: Check APIKEY
+        form.append('api_key', apiKey);
     });
-
-    
 }
-
-
 
 //  ···· SUBIR GIFO - PASO 3 -> ACT
 BTN_NEWGIF_UPLOAD.addEventListener('click', subirGifo);
@@ -137,26 +129,24 @@ function subirGifo() {
         method: 'POST',
         body: form,
     })
-
         .then(response => {
             return response.json();
         })
-
         
         .then(objeto => {
             console.log(objeto);
             let miGifId = objeto.data.id;
+            console.log(objeto.data)
 
-            
             ACTIONS_OVL_LOAD.style.display = "block";
-            LOADING_ICON.setAttribute("src", "/assets/check.svg");
+            LOADING_ICON.setAttribute("src", "../assets/check.svg");
             OVERLAY_PARAGRPH.innerText = "GIFO subido con éxito";
             OVERLAY_ACTIONS.innerHTML = `
                 <button id="btn-newgif-dwld" onclick="descargarGifCreado('${miGifId}')">
-                <img src="/assets/icon-download.svg" alt="download">
+                <img src="../assets/icon-download.svg" alt="download">
                 </button>
                 <button id="btn-newgif-link">
-                <img src="/assets/icon-link-normal.svg" alt="link">
+                <img src="../assets/icon-link-normal.svg" alt="link">
                 </button>
                 `;
 
@@ -179,8 +169,9 @@ function subirGifo() {
 }
 
 //FUNCION DESCARGAR GIF
-async function descargarGifCreado(gifImg) {
-    let blob = await fetch(gifImg).then( img => img.blob());;
+async function descargarGifCreado(gifUrl) {
+    let myGifUrl = `https://media.giphy.com/media/${gifUrl}/giphy.gif`
+    let blob = await fetch(myGifUrl).then( img => img.blob());;
     invokeSaveAsDialog(blob, "migifo.gif");
 }
 
@@ -239,19 +230,38 @@ function calculateTimeDuration(secs) {
     return hr + ':' + min + ':' + sec;
 }
 
+// REND FAVORITES
+function rendFavoritos () {
+    console.log('function rendFavoritos')
+    renderFavs()
+    if (NEWGIF_SECTION.classList.contains('main-newgif')) {
+      FAVORITES_SECTION.classList.remove('section-not-act')
+      FAVORITES_SECTION.classList.add('section-act')
+      NEWGIF_SECTION.classList.remove('main-newgif')
+      NEWGIF_SECTION.style.display = "none"
+      }
+     else {(MISGIFS_SECTION.classList.contains('section-act')) 
+      MISGIFS_SECTION.classList.remove('section-act')
+      MISGIFS_SECTION.classList.add('section-not-act');
+      FAVORITES_SECTION.classList.remove('section-not-act')
+      FAVORITES_SECTION.classList.add('section-act')
+     }
+     
+  }
+  // REND MIS GIFS
+  function rendMisgifs() {
+    renderMisGifs()
+    if (NEWGIF_SECTION.classList.contains('main-newgif')) {
+      MISGIFS_SECTION.classList.remove('section-not-act')
+      MISGIFS_SECTION.classList.add('section-act')
+      NEWGIF_SECTION.classList.add('section-not-act')
+      NEWGIF_SECTION.classList.remove('main-newgif')
+      }
+     else {(FAVORITES_SECTION.classList.contains('section-act')) 
+      FAVORITES_SECTION.classList.remove('section-act')
+      FAVORITES_SECTION.classList.add('section-not-act')
+      MISGIFS_SECTION.classList.remove('section-not-act');
+      MISGIFS_SECTION.classList.add('section-act')
+     }
+    }
 
-
-
-// TODO: CHECK THIS
-/* async function getVideo () { 
-    await navigator.mediaDevices.getUserMedia({
-        audio: false,
-        video: {
-            width: {max:640},
-            height: {max:480}
-        }
-    }) .then((stream) => {
-        video.srcObject = stream;
-        video.play();
-    })
-} */

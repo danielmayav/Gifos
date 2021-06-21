@@ -1,53 +1,23 @@
-/* .camera-container { // FOR ANIMATION
-    position: absolute;
-    top: 15.625rem;
-    left: 12%;
-    flex-wrap: wrap;
-    height: 9.375rem;
-    width: 9.375rem;
-    
-    margin: 0;
 
-    .cinta1{
-        position: relative;
-        top: 19px;
-        left: 4px;
-        width: 2.875rem;
-       height: 2.875rem; 
-       z-index: 1;
-       background-color: var(--page-background);
-    }
-    .cinta2{
-        position: relative;
-        top: 3px;
-        left: 4px;
-        width: 3.975rem;
-        height: 3.975rem; 
-        z-index: 1;
-       background-color: var(--page-background);
-
-    }
-    .camara{
-        position: relative;
-        bottom: 12px;
-        left: 15px;
-       width: 6.0125rem;
-       height: 6.5312rem;
-       z-index: -1;
-       background-color: var(--page-background);
-
-    }
-    .luzcamara{
-        position: relative;
-        bottom: 160px;
-        left: 115px;
-       background-color: var(--page-background);
-       width: 5.6875rem;
-       height: 9.4375rem; 
-    }
-     */
 .main-newgif{
-    display: none;
+    display: block;
+    @include breakpoint-down(small){
+        display: none;
+    }
+}
+
+.main-NG-mob {
+    @include breakpoint-up(medium){
+        display: none;
+    }
+    p {
+    color: $lightBlue;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 5vh 5vw;
+    text-align: center;
+    margin: 0;
+    }
 }
 .cont-ng {
     display: flex;
@@ -55,8 +25,8 @@
     justify-content: center;
 }
 .newgif-cont {
-    width: 600px;
-    height: 390px;
+    width: 37.5rem;
+    height: 24.375;
     border: 1px solid var(--color-text-blue);
     position: relative;
     display: flex;
@@ -70,9 +40,12 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
+@include breakpoint-down(medium){
+    visibility: hidden;
+}
     .camara {
-        width: 90px;
+        min-width: 90px;
+        
     }
     .luzcamara {
         width: 60px;
@@ -82,16 +55,16 @@
     }
 
 
-.video-cont { // TODO: INSERTADO REVISAR =====
-    width: 480px;
-    height: 320px;
+.video-cont { 
+    width: 30rem;
+    height: 20rem;
     display: grid;
     place-items: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-//  ==============================
+
     video {
         max-width: 90%;
         max-height: 90%;
@@ -147,14 +120,14 @@ flex-wrap: wrap;
         color: var(--page-background)
     }
 }
-// TODO: INSERTADO, REVISAR
+
 
 #grabar-title {
     font-size: 1.5625rem;
     line-height: 2.1875rem;
     text-align: center;
     margin: 0;
-    color: $darkblue;
+    color: var(--color-text-blue);
     #gifos-crear {
         color: $lightBlue
     }
@@ -251,6 +224,7 @@ flex-wrap: wrap;
     height: 75px;
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
     
 }
@@ -324,6 +298,9 @@ flex-wrap: wrap;
     width: 10.125rem;
     height: 29.0625rem;
     position: relative;
+    @include breakpoint-down(medium){
+        visibility: hidden;
+    }
 
     img {
         width: 100px;
