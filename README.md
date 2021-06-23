@@ -12,5 +12,5 @@ Aplicación web interactiva para compartir GIFs animados, poniendo en práctica 
 - <img src="https://img.shields.io/badge/-SCSS-ff69b4" alt="SCSS">
 - <img src="https://img.shields.io/badge/-HTML5-blue" alt="HTML5">
 
-  
+  En funcionamiento -> https://danielmayav.github.io/Gifos/
 
