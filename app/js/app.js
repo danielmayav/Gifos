@@ -107,6 +107,7 @@ function renderSearch(obj) {
     let id = obj.id
     let urlFullSize = obj.images.original.url
     let slug = obj.slug 
+    searchTitle.style.display = "block"
     searchResult.innerHTML += `
     <div class="gif-cont" onclick="expandGifMob('${urlImg}', '${title}', '${user}', '${slug}', '${id}')">
     <div class="card-details">

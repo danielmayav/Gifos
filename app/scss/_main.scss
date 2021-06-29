@@ -37,6 +37,12 @@
         color: $lightBlue;
     }
 
+    #result-title {
+        display: none;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+
     .searchbar {
         width: 70vw;
         min-width: 60vw;

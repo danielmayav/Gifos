@@ -1,14 +1,14 @@
 // MODO NOCTURNO
 
 function diurnoNocturno() {
-    const body = document.body;
-    var modo = document.getElementById("modnoct-btn");
-    if (modo.innerHTML === "MODO NOCTURNO") {
+    if (modo.innerHTML === "MODO NOCTURNO" & modoMob.innerHTML === "MODO NOCTURNO") {
       modo.innerHTML = "MODO DIURNO";
+      modoMob.innerHTML = "MODO DIURNO";
       body.classList.add('dark');
      
     } else {
       modo.innerHTML = "MODO NOCTURNO";
+      modoMob.innerHTML = "MODO NOCTURNO";
       body.classList.remove('dark');
      
     }};

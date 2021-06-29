@@ -8,8 +8,11 @@ const searchBar = document.querySelector('#searchBar');
 const searchBtn = document.querySelector('#searchBtn');
 const searchGif = document.querySelector('#searchGif');
 const MAIN_LOGO = document.getElementById('mainLogo')
-const MISGIFS_REND_BTN = document.getElementById('misGifsRendBtn')
-const FAVORITES_REND_BTN = document.getElementById('favRendBtn')
+const MISGIFS_REND_BTN = document.querySelectorAll('.misGifsRendBtn')
+const FAVORITES_REND_BTN = document.querySelectorAll('.favRendBtn')
+const modo = document.getElementById("modnoct-btn");
+const modoMob = document.getElementById("modnoct-btn-ov");
+
 const SEARCH_SECTION = document.getElementById('searchSection')
 const FAVORITES_SECTION = document.getElementById('favoritesSection')
 const MISGIFS_SECTION = document.getElementById('misgifosSection')

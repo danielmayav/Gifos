@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="logo" sizes="32x32"  href="/assets/logo-desktop.png">
+    <link rel="icon" sizes="32x32"  href="/assets/logo-desktop.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
@@ -23,7 +23,7 @@
     <div id="expand-overlay" class="expand-overlay">
         <button class="close" onclick="closeExpand()"></button>
         <div class="expand-cont">
-        <img id="expd-gif" class="expd-gif" src="" alt="">
+        <img id="expd-gif" class="expd-gif" src="./assets/loader.svg" alt="gif"> <!--FIXME:               < ===========-->
         <div class="expand-overlay__details">
             <div class="expand-overlay__text" id="expd-text">
                 <p>user</p>
@@ -43,12 +43,10 @@
             <a target="_self" href="#" class="logo" id="mainLogo" onclick="rendMain()"><img src="./assets/logo.svg" alt="logo"></a>
             <ul class="flex flex-ai-c hide-for-mobile" id="nav-links">
                 <li id="modnoct-btn" onclick="diurnoNocturno()">MODO NOCTURNO</li>
-                <li id="favRendBtn" onclick="rendFavoritos()">FAVORITOS</li>
-                <li id="misGifsRendBtn" onclick="rendMisgifs()">MIS GIFOS</li>
+                <li class="favRendBtn" onclick="rendFavoritos()">FAVORITOS</li>
+                <li class="misGifsRendBtn" onclick="rendMisgifs()">MIS GIFOS</li>
                 <li>
-                    <a target="_self" href="./html/creargifo.html" class="hide-for-mobile">
-                        <button class="new-gif-logo" onclick="console.log('crear gif')"></button>
-                    </a>
+                    <button class="new-gif-logo hide-for-mobile" onclick="location.href='./html/creargifo.html'"></button>
                 </li>
             </ul>
             <a href="#" class="hamburguer hide-for-desktop" id="hamburguerBtn"></a>
@@ -57,9 +55,9 @@
         <!-- ·············      OVERLAY MENU        ···············-->
         <div class="overlay">
             <ul>
-                <li id="modnoct-btn" onclick="diurnoNocturno()">MODO NOCTURNO</li>
-                <li id="favRendBtn" onclick="rendFavoritos()">FAVORITOS</li>
-                <li id="misGifsRendBtn" onclick="rendMisgifs()">MIS GIFOS</li>
+                <li id="modnoct-btn-ov" onclick="diurnoNocturno()">MODO NOCTURNO</li>
+                <li class="favRendBtn" onclick="rendFavoritos()">FAVORITOS</li>
+                <li class="misGifsRendBtn" onclick="rendMisgifs()">MIS GIFOS</li>
             </ul>
             </div>
         <!-- ================ -->
@@ -81,7 +79,7 @@
         </div>
         </form>
 <!-- ============       SEARCHRESULTS     ===============-->
-        <h2 id="result-title"></h2>
+        <h2 id="result-title">search results</h2>
         <div id="results" class="results"></div>
         <button class="btn-vermas" id="btn-vermas">VER MAS</button>
         <!-- ····       TAGS        ····· -->
@@ -113,7 +111,7 @@
         <h2 class="trending__title">Trending GIFOS</h2>
         <p class="trending__text">Mira los últimos GIFOS de nuestra comunidad.</p>  
        <div class="trend-slider-cont">    
-           <div class="prev-gif hide-for-mobile"id="prev-gif"></div>            
+           <div class="prev-gif hide-for-mobile" id="prev-gif"></div>            
            <div class="trending-slider-box">
                <div class="trend-container" id="trending-slider">
                    <!-- CONTAINER TO RENDER TRENDS -->
@@ -131,9 +129,9 @@
         </div>
             
                 <div class="footer-icons">
-                    <a href="#" class="footer-icons-fb" alt="facebook" ></a>
-                    <a href="#" class="footer-icons-tw" alt="twittwe" ></a>
-                    <a href="#" class="footer-icons-in" alt="instagram" ></a>
+                    <a href="https://www.facebook.com/GIPHY/" class="footer-icons-fb"></a>
+                    <a href="https://twitter.com/giphy?lang=es" class="footer-icons-tw"></a>
+                    <a href="https://www.instagram.com/giphy/?hl=es" class="footer-icons-in"></a>
                 </div>
             
             <div>

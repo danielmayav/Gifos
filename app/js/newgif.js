@@ -136,6 +136,7 @@ function subirGifo() {
         .then(objeto => {
             console.log(objeto);
             let miGifId = objeto.data.id;
+            
             console.log(objeto.data)
 
             ACTIONS_OVL_LOAD.style.display = "block";
@@ -146,7 +147,7 @@ function subirGifo() {
                 <img src="../assets/icon-download.svg" alt="download">
                 </button>
                 <button id="btn-newgif-link">
-                <img src="../assets/icon-link-normal.svg" alt="link">
+                <img src="../assets/icon-link-normal.svg" onclick="copyLink('${miGifId}')" alt="link">
                 </button>
                 `;
 
@@ -166,6 +167,14 @@ function subirGifo() {
         })
 
         .catch(error => console.log("error al subir gif a GIPHY" + error))
+}
+
+async function copyLink(id) {
+    let copyText = `https://media.giphy.com/media/${id}/giphy.gif`
+    navigator.clipboard.writeText(copyText).then(() => {
+        alert("¡Link copiado!")
+    })
+
 }
 
 //FUNCION DESCARGAR GIF

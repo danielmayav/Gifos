@@ -10,22 +10,31 @@ async function descargarGif(gifImg, gifNombre) {
 let favoritosArr = []
 
 function agregarFavorito(id, url, title, user,slug) {
-    if (favoritosArr == null) {
-        favoritosArr = []
-    }
-    let objectGif = {
-        id: id,
-        url: url,
-        title: title,
-        user: user,
-        slug: slug,
-    }
-    favoritosArr.push(objectGif);
-    localStorage.setItem('favorites', JSON.stringify(favoritosArr));
     let btnFav = document.getElementById(`icon-fav-${id}`)
     let btnFavExpnd = document.getElementById('favExpnd')
-    btnFav.style.backgroundImage = "var(--btn-fav-act)"
-    btnFavExpnd.style.backgroundImage = "var(--btn-fav-act)"
+    if (favoritosArr == null) {
+        favoritosArr = []
+    } else if (btnFav.classList.contains('favActive') && btnFavExpnd.classList.contains('favActive')) {
+        btnFav.style.backgroundImage = "var(--btn-fav)"
+        btnFav.classList.remove('favActive')
+        btnFavExpnd.style.backgroundImage = "var(--btn-fav)"
+        btnFavExpnd.classList.remove('favActive')
+        borrarGifFav(id)
+    } else {
+        let objectGif = {
+            id: id,
+            url: url,
+            title: title,
+            user: user,
+            slug: slug,
+        }
+        favoritosArr.push(objectGif);
+        localStorage.setItem('favorites', JSON.stringify(favoritosArr));
+        btnFav.style.backgroundImage = "var(--btn-fav-act)"
+        btnFav.classList.add('favActive')
+        btnFavExpnd.style.backgroundImage = "var(--btn-fav-act)";
+        btnFavExpnd.classList.add('favActive')
+    }
     renderFavs()
 }
 

@@ -84,6 +84,7 @@
   position: absolute;
   right: 10vw;
   top: 10vh;
+  border-radius: 6px;
 }
 
 .expand-overlay__details {
@@ -465,6 +466,12 @@ img {
 
 .main b {
   color: #50E3C2;
+}
+
+.main #result-title {
+  display: none;
+  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .main .searchbar {
